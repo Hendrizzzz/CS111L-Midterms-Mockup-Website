@@ -1,0 +1,408 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+
+:root {
+    --font-color-white: white;
+    --font-color-green: #009955;
+    --font-family1: 'Prosto One', sans-serif;
+    --font-family2: Lalezar, Helvetica;
+    --font-size1: 40px;
+    --font-size2: 20px;
+}
+
+
+/* Universal CSS */
+* {
+    box-sizing: border-box;
+    font-family: 'Prosto One', sans-serif;
+}
+
+body{
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    height: 80px;
+    width: 100%;
+}
+
+.title-and-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar-logo{
+    width: 87px; 
+    height: 82px;
+}
+
+#navbar-title{
+    color: var(--font-color-green);
+    font-size: 48px; 
+    font-weight: 400; 
+}
+
+.smaller{
+    font-size: 24px; 
+    font-family: var(--font-family); 
+    font-weight: 400; 
+    word-wrap: break-word;
+}
+
+nav ul li {
+    display: inline;
+    padding: 2%;
+}
+
+nav ul{
+    position: relative;
+    right: 2%;
+    width: 500px;
+    text-align: left;
+    padding: 0;
+}
+
+nav ul li a{
+    text-decoration-line: none;
+    color: var(--font-color-green);
+    font-weight: bolder;
+    font-size: 120%;
+}
+
+nav ul li a:hover{
+    color: red;
+}
+
+
+.main-title {
+    width: 100%;
+    display: flex;
+    align-items: center; /* Vertically center the content within .main-title */
+    justify-content: space-between; /* Create space between children elements */
+    margin: 0;
+}
+
+.title {
+    width: 40% /* Allow the text to take as much space as needed */
+}
+
+.title h1 {
+    color: var(--font-color-green);
+    font-weight: 400;
+    font-size: 13vw; /* Use vw (viewport width) for font size */
+    font-family: var(--font-family);
+    line-height: 0.8; /* You can adjust this value */
+}
+
+.title h6 {
+    color: black;
+    font-family: var(--font-family1);
+    font-size: 2vw; /* Use vw for font size */
+    margin-top: -19%;
+}
+
+.title-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.title-logo img {
+    width: 100%; /* Adjust the width of the image as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any extra spacing around the image */
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 153, 85, 0.53) 0%, rgba(0, 153, 85, 0) 100%);
+}
+
+.our-purpose, .project-plan-container, .meet-the-team {
+    margin-top: 8%;
+}
+
+.context {
+    padding: 0 8% 8% 8%;
+    width: 100vw;
+    max-width: 100%; /* Set the width to 100% to make it responsive */
+    height: auto; /* Use auto for responsive height based on content */
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 350px 0px 0px 350px;
+    border: 1px solid;
+    border-color: #ffffff;
+    background: linear-gradient(180deg, rgb(0, 153, 85) 29.58%, rgba(0, 153, 85, 0) 100%);
+}
+
+.context-title h2, .about-title{
+    text-align: center;
+    font-family: var(--font-family1);
+    color: white;
+    font-size: 60px;
+    line-height: 0;
+}
+
+.context-content{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.quality, .sustainable, .efficient{
+    width: 30%;
+    color: white;
+    font-family: var(--font-family1);
+}
+
+.title-link{
+    color: var(--font-color-green);
+    text-align: center;
+    font-family: var(--font-family1);
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120px; /* 120% */
+}
+
+.beneficiaries{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8% 8% 8%;
+    width: 100vw;
+    max-width: 100%; /* Set the width to 100% to make it responsive */
+    height: auto; /* Use auto for responsive height based on content */
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 350px 0px 0px 350px;
+    border: 1px solid #FFF;
+    background: linear-gradient(180deg, #095 51.56%, rgba(0, 153, 85, 0.00) 100%);
+}
+
+.beneficiaries span{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 381px;
+    height: 223px;
+}
+
+.beneficiaries-images img{
+    margin: 0 2%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain
+}
+
+#beneficiaries-text{
+    color: var(--font-color-white);
+    padding: 0 10%;
+    text-align: center;
+}
+
+.our-purpose{
+    padding: 2% 8%;
+    width: 100vw;
+    height: 463px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgb(0, 153, 85) 0%, rgba(0, 153, 85, 0) 100%);
+}
+
+.our-purpose-text{
+    color: var(--font-color-white);
+    height: 60%;
+    font-size: 200%;
+    text-align: center;
+}
+
+.project-plan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 463px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(0, 153, 85) 100%);
+}
+
+.project-plan img{
+    width: 750px;
+    height: 300px;
+}
+
+.project-plan-list{
+    color: var(--font-color-white);
+}
+
+.green-color{
+    color: var(--font-color-green);
+    text-align: center;
+}
+
+.circle-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.first-two-circles, .last-three-circles{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-two-circles .circle{
+    margin: 0 100px;
+}
+
+.last-three-circles .circle{
+    margin: 60px;
+}
+
+.circle{
+    width: 350px;
+}
+
+.circle div{
+    width: 343px;
+    height: 322px;
+    top: 0;
+    left: 0;
+    background-color: rgba(170, 170, 170, 1);
+    border-radius: 171.5px/161px;
+}
+
+
+.circle p {
+    margin: 0; /* Remove default margin for the paragraph */
+    padding-top: 10px; /* Space between the circle and text */
+    text-align: center; /* Center text within the circle */
+}
+
+footer .contact-info{
+    background-color: rgba(79, 64, 64, 1);
+    color: var(--font-color-white);
+}
+
+footer .contact-info .contact-info-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contact-info-title{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.contact-info-content .address, .contact-info-content .email{
+    margin: 2% 5% 7% 5%;
+    text-align: center;
+}
+
+
+/* Default styles for larger screens */
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .image .beneficiaries {
+        width: 100%; /* Make the width 100% of the viewport width */
+        height: auto; /* Allow the height to adjust proportionally */
+        top: 50%; /* Vertically center the element */
+        left: 50%; /* Horizontally center the element */
+        transform: translate(-50%, -50%); /* Center the element using transform */
+    }
+}
+
+
+/* Universal CSS (No changes here) */
+/* ... */
+
+/* Default styles for larger screens (No changes here) */
+/* ... */
+
+/* Media query for smaller screens (Mobile) */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Adjust the base font size for smaller screens */
+    }
+
+    nav {
+        height: auto; /* Allow the height to adjust based on content */
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center items vertically */
+    }
+
+    #navbar-title {
+        font-size: 32px; /* Adjust font size for smaller screens */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center items vertically */
+        width: auto; /* Allow the width to adjust based on content */
+    }
+
+    nav ul li {
+        display: block; /* Stack navigation items vertically */
+        padding: 10px; /* Add more spacing for touch-friendly buttons */
+    }
+
+    .main-title {
+        flex-direction: column; /* Stack main title content vertically */
+    }
+
+    .title {
+        width: 100%; /* Take the full width on smaller screens */
+        text-align: center; /* Center text */
+    }
+
+    .title h1 {
+        font-size: 8vw; /* Adjust font size for smaller screens */
+    }
+
+    .title h6 {
+        font-size: 3vw; /* Adjust font size for smaller screens */
+    }
+
+    .title-logo img {
+        width: 80%; /* Adjust image width for smaller screens */
+    }
+
+    .context, .beneficiaries, .our-purpose, .project-plan, .meet-the-team {
+        border-radius: 0; /* Remove border radius on smaller screens */
+    }
+
+    .circle-container {
+        flex-direction: column; /* Stack circles vertically for smaller screens */
+    }
+
+    .first-two-circles, .last-three-circles {
+        flex-direction: column; /* Stack circles vertically for smaller screens */
+    }
+
+    .first-two-circles .circle, .last-three-circles .circle {
+        margin: 20px 0; /* Adjust margin for smaller screens */
+    }
+
+    .circle {
+        width: 200px; /* Adjust circle size for smaller screens */
+    }
+
+    .circle div {
+        width: 194px; /* Adjust circle size for smaller screens */
+        height: 182px; /* Adjust circle size for smaller screens */
+    }
+}
+
