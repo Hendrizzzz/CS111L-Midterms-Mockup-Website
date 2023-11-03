@@ -1,11 +1,14 @@
 /* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 :root {
     --font-color-white: white;
     --font-color-green: #009955;
     --font-family1: 'Prosto One', sans-serif;
-    --font-family2: Lalezar, Helvetica;
+    --font-family2: 'Lalezar', Helvetica;
+    --font-family3: 'Montserrat', Helvetica;
     --font-size1: 40px;
     --font-size2: 20px;
 }
@@ -21,6 +24,12 @@ body{
     background-color: #ffffff;
     width: 100%;
     margin: 0
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 nav{
@@ -81,45 +90,42 @@ nav ul li a:hover{
     color: red;
 }
 
-
 .main-title {
-    width: 100%;
     display: flex;
     align-items: center; /* Vertically center the content within .main-title */
-    justify-content: space-between; /* Create space between children elements */
-    margin: 0;
+    justify-content: start; /* Create space between children elements */
+    max-width: 1440px;
+    margin: auto
 }
 
 .title {
-    width: 40% /* Allow the text to take as much space as needed */
+    width: 30%; /* Allow the text to take as much space as needed */
 }
 
 .title h1 {
+    width: auto;
     color: var(--font-color-green);
     font-weight: 400;
-    font-size: 13vw; /* Use vw (viewport width) for font size */
-    font-family: var(--font-family);
-    line-height: 0.8; /* You can adjust this value */
+    font-size: clamp(3.125rem, -0.1995rem + 10.6383vw, 9.375rem);    line-height: 0.8; /* You can adjust this value */
+    margin: 0;
 }
 
 .title h6 {
     color: black;
     font-family: var(--font-family1);
-    font-size: 2vw; /* Use vw for font size */
-    margin-top: -19%;
+    font-size: 24px; /* Use vw for font size */
+    margin-top: 0;
 }
 
+
 .title-logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
+    width: 80%;
+    height: auto;
 }
 
 .title-logo img {
-    width: 100%; /* Adjust the width of the image as needed */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove any extra spacing around the image */
+    width: 940px; 
+    margin: 0;
     background: radial-gradient(50% 50% at 50% 50%, rgba(0, 153, 85, 0.53) 0%, rgba(0, 153, 85, 0) 100%);
 }
 
@@ -129,7 +135,7 @@ nav ul li a:hover{
 
 .context {
     padding: 0 8% 8% 8%;
-    width: 100vw;
+    width: 1440px;
     max-width: 100%; /* Set the width to 100% to make it responsive */
     height: auto; /* Use auto for responsive height based on content */
     background-color: rgba(255, 255, 255, 1);
@@ -169,6 +175,102 @@ nav ul li a:hover{
     line-height: 120px; /* 120% */
 }
 
+.convenient-and-hassle-free-title, .assistance-log-system-title{
+    text-align: center;
+    font-family: var(--font-family1);
+    color: var(--font-color-green);
+    font-size: 40px;
+}
+
+.convenient-and-hassle-free-content{
+    display: flex;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.convenient-and-hassle-free .convenient-and-hassle-free-content h5, .assistance-log-system-content h5{
+    width: 30%;
+    text-align: center;
+    color: var(--font-color-green);
+    font-size: 1.875rem;
+    line-height: 2;
+}
+
+.convenient-and-hassle-free-content #text1{
+    margin-right: 20%;
+}
+
+.convenient-and-hassle-free-content #text2{
+    margin-left: 20%;
+}
+
+.convenient-and-hassle-free-content-image{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.convenient-and-hassle-free-content-image img{
+    width: 30%;
+    margin-top: -30%; 
+}
+
+.advance-watering-system{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--font-color-white);
+    padding: 0 8% 8% 8%;
+    width: 1440px;
+    max-width: 100%; /* Set the width to 100% to make it responsive */
+    height: auto; /* Use auto for responsive height based on content */
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 350px 0px 0px 350px;
+    border: 1px solid #FFF;
+    background: linear-gradient(180deg, #095 51.56%, rgba(0, 153, 85, 0.00) 100%);
+}
+
+.advance-watering-system-title{
+    margin: 0 0 0 12%;
+    font-size: 40px;
+}
+
+.advance-watering-system-text{
+    margin: -5% 0 0 10%;
+    font-size: 30px;
+    font-family: var(--font-family3);
+}
+
+
+.advance-watering-system-image img{
+   margin-top: -5%;
+   width: 70%;
+}
+
+.assistance-log-system{
+    text-align: center;
+}
+
+.assistance-log-system-content{
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    width: 100%;
+}
+
+.assistance-log-system-content img{
+    width: 25%;
+    padding: 3%;
+}
+
+.assistance-log-system-content h5{
+    margin-left: 10%;
+    width: 70%;
+}
+
 .beneficiaries{
     display: flex;
     flex-direction: column;
@@ -178,10 +280,7 @@ nav ul li a:hover{
     width: 100vw;
     max-width: 100%; /* Set the width to 100% to make it responsive */
     height: auto; /* Use auto for responsive height based on content */
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: 350px 0px 0px 350px;
-    border: 1px solid #FFF;
-    background: linear-gradient(180deg, #095 51.56%, rgba(0, 153, 85, 0.00) 100%);
+    
 }
 
 .beneficiaries span{
@@ -208,8 +307,8 @@ nav ul li a:hover{
 
 .our-purpose{
     padding: 2% 8%;
-    width: 100vw;
-    height: 463px;
+    width: 1440px;
+    height: auto;
     top: 0;
     left: 0;
     background: linear-gradient(180deg, rgb(0, 153, 85) 0%, rgba(0, 153, 85, 0) 100%);
@@ -227,21 +326,57 @@ nav ul li a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 463px;
-    top: 0;
-    left: 0;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(0, 153, 85) 100%);
+    width: 100%;
+    height: auto;
 }
 
 .project-plan img{
-    width: 750px;
-    height: 300px;
+    width: 80%;
+    height: 10%;
 }
 
-.project-plan-list{
-    color: var(--font-color-white);
+.project-plan-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 0 4% !important;
 }
+  
+ol {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.row-1, .row-2 {
+width: 100%;
+display: flex;
+justify-content: center;
+
+}
+
+.project-plan-list li {
+display: inline;
+margin: 10px;
+}
+
+.container1, .container2, .container3, .container4, .container5, .container6 {
+display: flex;
+align-items: center;
+width: 30%;
+height: auto;
+background-color: var(--font-color-green);
+font-family: var(--font-family3);
+border-radius: 18%;
+text-align: center;
+color: #fff;
+margin: 5%;
+line-height: 2;
+font-size: 90%;
+}
+  
 
 .green-color{
     color: var(--font-color-green);
