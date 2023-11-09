@@ -5,25 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future Farming</title>
     <link rel="stylesheet" href="/styles.css">
-    <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
-        <section>
-            <nav>
-                <div class="title-and-logo">
-                    <img src="images/logo.png" id="navbar-logo" alt="This is an image of the logo of the Future Farming">
-                    <h4 id="navbar-title">Future Farming <span class="smaller">by BoyBand</span></h4>
-                </div>
-                    <ul>
-                        <li><a href=""><b>ABOUT</b></a></li>
-                        <li><a href=""><b>TEAM</b></a></li>
-                        <li><a href=""><b>CONTACT</b></a></li>
-                        <li id="mock-up-button"><a href=""><b>MOCK UP</b></a></li>
-                    </ul>   
-                </nav>
-        </section>
-
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="navbar">
+        <nav>
+            <div class="title-and-logo">
+                <img style="max-width: 100%; max-height: 100%;" src="images/logo.png" id="navbar-logo" alt="This is an image of the logo of the Future Farming">
+                <h4 id="navbar-title">FutureFarming <span class="smaller">by BoyBand</span></h4>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="#about"><b>ABOUT</b></a></li>
+                    <li><a href="#team"><b>TEAM</b></a></li>
+                    <li><a href="#contact"><b>CONTACT</b></a></li>
+                    <li id="mock-up-button"><a href=""><b>MOCKUP</b></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
         <div class="body">
         <main>
@@ -39,8 +38,7 @@
 
             <div class="context">
                 <div class="context-title">
-                    <h2>An All-Season Smart</h2>
-                    <h2>Greenhouse</h2>
+                    <h2>An All-Season Smart <span class="smaller2">Greenhouse</span></h2>
                 </div>
                 <div class="context-content">
                     <div class="quality">
@@ -59,13 +57,13 @@
             </div>
 
             <div class="convenient-and-hassle-free">
-                <div class="convenient-and-hassle-free-title"><h2>Convenient & Hassle-free!</h2></div>
+                <div class="convenient-and-hassle-free-title"><h2><span class="smaller2">Convenient</span> & Hassle-free!</h2></div>
                 <div class="convenient-and-hassle-free-content">
                     <h5 id="text1">Get to monitor and control your greenhouse in the convenience of just a few clicks in the Future Farming app!</h5>
+                    <div class="convenient-and-hassle-free-content-image">
+                        <img src="images/iphone(2).png" alt="This is an image of the Future Farming System in a mobile">
+                    </div>
                     <h5 id="text2">Control and monitor the temperature, humidity and the soil's moisture!</h5>
-                </div>
-                <div class="convenient-and-hassle-free-content-image">
-                    <img src="images/iphone (2).png" alt="This is an image of the Future Farming System in a mobile">
                 </div>
             </div>
 
@@ -82,23 +80,25 @@
             </div>
 
             <div class="assistance-log-system">
-                <div class="assistance-log-system-title"><h2>Assistance of a Log System</h2></div>
+                <div class="assistance-log-system-title"><h2><span class="smaller2">Assistance</span> of a Log System</h2></div>
                 <div class="assistance-log-system-content">
-                    <img style="max-width: 80%; max-height: 100%;" src="images/controlmockup.png" alt="This is an image of the log system of the Future Farming in a mobile">
-                    <h5>Keep track of the changes you've made, know which environment your plants prefer, and witness the progress of your greenhouse with Future Farming!</h5>
+                    <div class="assistance-log-system-image">
+                        <img src="images/controlmockup.png" alt="This is an image of the log system of the Future Farming in a mobile">
+                    </div>
+                    <h5 id="assistance-text">Keep track of the changes you've made, know which environment your plants prefer, and witness the progress of your greenhouse with Future Farming!</h5>
                 </div>
             </div>
 
-            <div class="about-the-project">
+            <div class="about-the-project" id="about">
                 <div class="title-link-container"><h2 class="title-link">About The Project</h2></div>
                     <div class="our-purpose">
                         <div class="beneficiaries">
-                            <h2 class="about-title">Beneficiaries</h2>
-                            <span class="beneficiaries-images">
+                            <h2 class="about-title"><span class="smaller2">Beneficiaries</span></h2>
+                            <div class="beneficiaries-images">
                                 <img src="images/Beneficiaries.jpg" alt="This is an image of a beneficiary of the Future Farming">
                                 <img src="images/Beneficiaries2.JPG" alt="This is the second image of beneficiary of the Future Farming">
                                 <img src="images/Beneficiaries3.JPG" alt="This is the third image of beneficiary of the Future Farming">
-                            </span>
+                            </div>
                                 <div class="beneficiaries-text"><p id="beneficiaries-text">Our project is for the farmers of the Philippines who continuously struggle with the economy and the climate of our country, with constant monsoons all year round, affecting their living.</p></div>
                         </div>
                         <div class="our-purpose-title"><h2 class="about-title">Our Purpose</h2></div>
@@ -108,16 +108,17 @@
                                 <div class="project-plan">
                                     <img src="images/259b5a38212cf8d126f4054f8a90bed7.jpg" alt="This is an image of plants inside a greenhouse">
                                     <div class="project-plan-list">
-                                        <ol class="row-1">
-                                            <div class="container1"><li>Research and Development: Develop and test smart greenhouse technology.</li></div>
-                                            <div class="container1"><li>Education and Training: Provide farmers with the knowledge and training to use the technology effectively.</li></div>
-                                            <div class="container1"><li>Implementation: Assist farmers in setting up and operating smart greenhouses.</li></div>
-                                        </ol>
-                                        <ol class="row-2">
-                                            <div class="container4"><li>Monitoring and Support: Continuously monitor and offer support to ensure successful crop cultivation.</li></div>
-                                            <div class="container5"><li>Data Collection: Gather data on crop yields, resource usage, and environmental impact.</li></div>
-                                            <div class="container6"><li>Expansion: Scale the project to reach more farmers and regions.</li></div>
-                                        </ol>
+                                        <div class="row-1">
+                                            <div class="container">Research and Development: Develop and test smart greenhouse technology.</div>
+                                            <div class="container">Education and Training: Provide farmers with the knowledge and training to use the technology effectively.</div>
+                                            <div class="container">Implementation: Assist farmers in setting up and operating smart greenhouses.</div>                                            
+                                        </div>
+                                        <div class="row-2">
+                                            <div class="container">Monitoring and Support: Continuously monitor and offer support to ensure successful crop cultivation.</div>
+                                            <div class="container">Data Collection: Gather data on crop yields, resource usage, and environmental impact.</div>
+                                            <div class="container">Expansion: Scale the project to reach more farmers and regions.</div>
+                                        </div>
+                                        
                                     </div>
                                     
                                 </div>
@@ -125,32 +126,32 @@
                     </div>
             </div>
 
-            <div class="meet-the-team">
+            <div class="meet-the-team" id="team">
                 <h2 class="title-link">Meet The Team</h2>
                 <div class="circle-container">
                     <div class="first-two-circles">
-                        <div class="circle"><div></div><p>Jim Hendrix Bag-eo</p></div>
-                        <div class="circle"><div></div><p>Byron Smith Valdez</p></div>
+                        <div class="circle" id="circle1"><img src="images/5.jpg" alt="This is a photo of Jim Hendrix Bag-eo"><p>Jim Hendrix Bag-eo</p></div>
+                        <div class="circle"><img src="images/4.jpeg" alt="This is a photo of Byron Smith Valdez"><p>Byron Smith Valdez</p></div>
                     </div>
                     <div class="last-three-circles">
-                        <div class="circle"><div></div><p>Aaliyah Martinez</p></div>
-                        <div class="circle"><div></div><p>Jazreil Jaron Sabog</p></div>
-                        <div class="circle"><div></div><p>Krenz Darrel Casilen</p></div>
+                        <div class="circle"><img src="images/1.jpeg" alt="This is a photo of Aaliyah Martinez"><p>Aaliyah Martinez</p></div>
+                        <div class="circle"><img src="images/3.png" alt="This is a photo of Jazreil Jaron Sabog"><p>Jazreil Jaron Sabog</p></div>
+                        <div class="circle"><img src="images/2.jpg" alt="This is a photo of Krenz Darrel Casilen"><p>Krenz Darrel Casilen</p></div>
                     </div>
                 </div>
             </div>
 
             <footer>
-                <div class="contact-info">
+                <div class="contact-info" id="contact">
                     <div style="height: 3px;"></div>
                     <div class="contact-info-title"><h3>Contact Us</h3></div>
                     <div class="contact-info-content">
                         <div class="address">
-                            <p>Address</p>
+                            <p><b>Address</b></p>
                             <p>Saint Louis University Maryheights Campus</p>
                         </div>
                         <div class="email">
-                            <p>Email</p>
+                            <p><b>Email</b> </p>
                             <p>futurefarming@gmail.com</p>
                         </div>
                     </div>
@@ -158,5 +159,6 @@
             </footer>
         </main>
     </div>
+        
 </body>
 </html>

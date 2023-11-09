@@ -1,69 +1,97 @@
-/* Import Font */
-@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@font-face {
+    font-family: Prosto-One;
+    src: url(fonts/ProstoOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Lalezar;
+    src: url(fonts/Lalezar-Regular.ttf);
+}
 
 :root {
     --font-color-white: white;
     --font-color-green: #009955;
-    --font-family1: 'Prosto One', sans-serif;
-    --font-family2: 'Lalezar', Helvetica;
-    --font-family3: 'Montserrat', Helvetica;
-    --font-size1: 40px;
+    --font-size1: clamp(3.125rem, -0.1995rem + 10.6383vw, 9.375rem);
     --font-size2: 20px;
 }
 
 
-/* Universal CSS */
 * {
     box-sizing: border-box;
-    font-family: 'Prosto One', sans-serif;
 }
 
 body{
-    background-color: #ffffff;
-    width: 100%;
-    margin: 0
-}
-
-.body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0;
 }
 
 nav{
+    position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    background-color: white;
-    height: 80px;
+    background-color: var(--font-color-white);
+    height: 5%;
     width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 3%;
 }
 
 .title-and-logo{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    position: absolute;
+    left: 0;
+    width: 50%;
 }
 
 #navbar-logo{
     width: 87px; 
-    height: 82px;
+    height: auto;
 }
 
 #navbar-title{
     color: var(--font-color-green);
-    font-size: 48px; 
+    font-family: Prosto-One;
+    font-size: 50px; 
     font-weight: 400; 
 }
 
 .smaller{
-    font-size: 24px; 
-    font-family: var(--font-family); 
+    font-size: 18px; 
+    font-family: Montserrat-Bold; 
     font-weight: 400; 
     word-wrap: break-word;
+}
+
+nav .links{
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin: 0;
+    font-family: Lalezar;
+    font-size: 25px;
+    width: 50%;
+}
+
+.button a{
+    color: white;
+    margin: 0 1.5%;
 }
 
 nav ul li {
@@ -72,10 +100,8 @@ nav ul li {
 }
 
 nav ul{
-    position: relative;
-    right: 2%;
-    width: 500px;
-    text-align: left;
+    width: 100%;
+    text-align: right;
     padding: 0;
 }
 
@@ -92,39 +118,43 @@ nav ul li a:hover{
 
 .main-title {
     display: flex;
-    align-items: center; /* Vertically center the content within .main-title */
-    justify-content: start; /* Create space between children elements */
+    align-items: center; 
+    justify-content: space-between; 
     max-width: 1440px;
     margin: auto
 }
 
 .title {
-    width: 30%; /* Allow the text to take as much space as needed */
+    width: 30%; 
 }
 
 .title h1 {
     width: auto;
     color: var(--font-color-green);
     font-weight: 400;
-    font-size: clamp(3.125rem, -0.1995rem + 10.6383vw, 9.375rem);    line-height: 0.8; /* You can adjust this value */
+    font-size: clamp(3.125rem, -0.1995rem + 10.6383vw, 9.375rem);    
+    line-height: 0.8; 
     margin: 0;
+    font-family: Prosto-One;
 }
+
 
 .title h6 {
     color: black;
-    font-family: var(--font-family1);
-    font-size: 24px; /* Use vw for font size */
+    font-family: Prosto-One;
+    font-size: 24px; 
     margin-top: 0;
 }
 
-
 .title-logo{
-    width: 80%;
-    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 10%;
 }
 
 .title-logo img {
-    width: 940px; 
+    width: 100%; 
     margin: 0;
     background: radial-gradient(50% 50% at 50% 50%, rgba(0, 153, 85, 0.53) 0%, rgba(0, 153, 85, 0) 100%);
 }
@@ -134,86 +164,116 @@ nav ul li a:hover{
 }
 
 .context {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
     padding: 0 8% 8% 8%;
+    margin: 0 auto;
     width: 1440px;
-    max-width: 100%; /* Set the width to 100% to make it responsive */
-    height: auto; /* Use auto for responsive height based on content */
+    max-width: 100%; 
+    height: auto; 
     background-color: rgba(255, 255, 255, 1);
     border-radius: 350px 0px 0px 350px;
-    border: 1px solid;
-    border-color: #ffffff;
     background: linear-gradient(180deg, rgb(0, 153, 85) 29.58%, rgba(0, 153, 85, 0) 100%);
 }
 
 .context-title h2, .about-title{
     text-align: center;
-    font-family: var(--font-family1);
     color: white;
     font-size: 60px;
-    line-height: 0;
+    margin: 2%;
+    font-family: Prosto-One;
+}
+
+.context-title{
+    padding: 0 0 0 10%;
+    font-family: Prosto-One;
 }
 
 .context-content{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
+    flex-wrap: wrap;
 }
 
-.quality, .sustainable, .efficient{
+.context-content h4{
+    font-family: Montserrat-Bold;
+    font-size: 45px;
+    margin: 0;
+}
+
+.context-content p{
+    font-family: Prosto-One;
+    margin-top: 0;
+    font-size: 20px;;
+}
+
+.quality, .sustainable, .efficient{    
+    flex-wrap: wrap;
     width: 30%;
     color: white;
-    font-family: var(--font-family1);
 }
 
 .title-link{
     color: var(--font-color-green);
     text-align: center;
-    font-family: var(--font-family1);
     font-size: 100px;
     font-style: normal;
     font-weight: 400;
     line-height: 120px; /* 120% */
+    margin: 0;
+    font-family: Prosto-One;
+}
+
+.convenient-and-hassle-free{
+    margin: 0 auto;
 }
 
 .convenient-and-hassle-free-title, .assistance-log-system-title{
     text-align: center;
-    font-family: var(--font-family1);
     color: var(--font-color-green);
     font-size: 40px;
+    font-family: Prosto-One;
+}
+
+.convenient-and-hassle-free-title h2{
+    margin-bottom: 0;
 }
 
 .convenient-and-hassle-free-content{
     display: flex;
     justify-content: center;
-    padding: 0 5%;
+    flex-wrap: wrap;
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 0%; /*This is 0 5%*/
 }
 
 .convenient-and-hassle-free .convenient-and-hassle-free-content h5, .assistance-log-system-content h5{
-    width: 30%;
+    width: 25%;
     text-align: center;
     color: var(--font-color-green);
-    font-size: 1.875rem;
+    font-size: 35px;
     line-height: 2;
+    font-family: Montserrat-Bold;
+    margin: auto 0;
 }
 
-.convenient-and-hassle-free-content #text1{
-    margin-right: 20%;
-}
-
-.convenient-and-hassle-free-content #text2{
-    margin-left: 20%;
-}
 
 .convenient-and-hassle-free-content-image{
     display: flex;
     justify-content: center;
-    max-width: 100%;
-    height: auto;
+    align-items: end;
+    width: 35%;
 }
 
 .convenient-and-hassle-free-content-image img{
-    width: 30%;
-    margin-top: -30%; 
+    width: 100%;
+    height: auto;
+    margin: 0;
 }
 
 .advance-watering-system{
@@ -221,54 +281,84 @@ nav ul li a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: -0.05% auto;
     text-align: center;
     color: var(--font-color-white);
     padding: 0 8% 8% 8%;
     width: 1440px;
-    max-width: 100%; /* Set the width to 100% to make it responsive */
-    height: auto; /* Use auto for responsive height based on content */
+    max-width: 100%; 
+    height: auto; 
     background-color: rgba(255, 255, 255, 1);
-    border-radius: 350px 0px 0px 350px;
-    border: 1px solid #FFF;
+    border-radius: 0px 350px 350px 0px;
     background: linear-gradient(180deg, #095 51.56%, rgba(0, 153, 85, 0.00) 100%);
 }
 
 .advance-watering-system-title{
-    margin: 0 0 0 12%;
+    margin: 0;
     font-size: 40px;
+    font-family: Prosto-One;
+    padding-right: 5%;
+    width: 95%;
 }
 
 .advance-watering-system-text{
-    margin: -5% 0 0 10%;
-    font-size: 30px;
-    font-family: var(--font-family3);
+    margin: 0;
+    font-size: 35px;
+    font-family: Montserrat-Bold;
+    width: 90%
+}
+
+.advance-watering-system h2, h5{
+    margin: 1%;
 }
 
 
 .advance-watering-system-image img{
-   margin-top: -5%;
+   margin: -5% 0 -25% 0;
    width: 70%;
 }
 
 .assistance-log-system{
     text-align: center;
+    width: 1440px;
+    max-width: 100%;
+    margin: 100px auto 0 auto;
 }
 
 .assistance-log-system-content{
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0 10%;
-    width: 100%;
+}
+
+.assistance-log-system-image{
+    width: 20%;
+    max-height: 100%;
 }
 
 .assistance-log-system-content img{
-    width: 25%;
-    padding: 3%;
+    height: 4%;
+    width: 100%;
 }
 
 .assistance-log-system-content h5{
-    margin-left: 10%;
     width: 70%;
+}
+
+.about-the-project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 1440px;
+    max-width: 100%;
+}
+
+.title-link-container{
+    margin-top: 5%;
+    font-family: Prosto-One;
 }
 
 .beneficiaries{
@@ -277,41 +367,44 @@ nav ul li a:hover{
     justify-content: center;
     align-items: center;
     padding: 0 8% 8% 8%;
-    width: 100vw;
-    max-width: 100%; /* Set the width to 100% to make it responsive */
-    height: auto; /* Use auto for responsive height based on content */
+    margin: 0 auto;
+    width: 1440px;
+    max-width: 100%; 
+    height: auto; 
     
 }
 
-.beneficiaries span{
+.beneficiaries div{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 381px;
-    height: 223px;
+    width: 1440px;
+    max-width: 100%;
 }
 
 .beneficiaries-images img{
     margin: 0 2%;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain
+    width: 42%;
 }
 
 #beneficiaries-text{
     color: var(--font-color-white);
     padding: 0 10%;
     text-align: center;
+    font-size: 200%;
+    font-family: Montserrat-Bold;
 }
 
 .our-purpose{
     padding: 2% 8%;
     width: 1440px;
+    max-width: 100%;
     height: auto;
     top: 0;
     left: 0;
     background: linear-gradient(180deg, rgb(0, 153, 85) 0%, rgba(0, 153, 85, 0) 100%);
+    margin: 0;
 }
 
 .our-purpose-text{
@@ -319,6 +412,7 @@ nav ul li a:hover{
     height: 60%;
     font-size: 200%;
     text-align: center;
+    font-family: Montserrat-Bold;
 }
 
 .project-plan{
@@ -332,52 +426,53 @@ nav ul li a:hover{
 
 .project-plan img{
     width: 80%;
-    height: 10%;
+    height: auto;
 }
 
 .project-plan-list {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 4% !important;
-}
-  
-ol {
-list-style: none;
-padding: 0;
-margin: 0;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat-Bold;
 }
 
 .row-1, .row-2 {
-width: 100%;
-display: flex;
-justify-content: center;
-
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .project-plan-list li {
-display: inline;
-margin: 10px;
+    display: inline;
+    margin: 5%;
 }
 
-.container1, .container2, .container3, .container4, .container5, .container6 {
-display: flex;
-align-items: center;
-width: 30%;
-height: auto;
-background-color: var(--font-color-green);
-font-family: var(--font-family3);
-border-radius: 18%;
-text-align: center;
-color: #fff;
-margin: 5%;
-line-height: 2;
-font-size: 90%;
+.meet-the-team {
+    margin: 2%;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    width: 255px;
+    height: 137px;
+    background-color: var(--font-color-green);
+    font-family: Prosto-One;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+    margin: 5% 5% 0 0;
+    line-height: 2;
+    font-size: 90%;
+    margin: 2%;
 }
   
-
 .green-color{
     color: var(--font-color-green);
     text-align: center;
@@ -386,6 +481,10 @@ font-size: 90%;
 .circle-container{
     display: flex;
     flex-direction: column;
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: Prosto-One;
 }
 
 .first-two-circles, .last-three-circles{
@@ -393,34 +492,47 @@ font-size: 90%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
 }
 
 .first-two-circles .circle{
-    margin: 0 100px;
+    margin: 4% 6%;
 }
 
 .last-three-circles .circle{
-    margin: 60px;
+    margin: 4%;
 }
 
-.circle{
-    width: 350px;
+.circle {
+    width: 100%;
+    height: 260px; 
+    max-width: 250px;   
 }
 
-.circle div{
-    width: 343px;
-    height: 322px;
-    top: 0;
-    left: 0;
+.circle div {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
     background-color: rgba(170, 170, 170, 1);
-    border-radius: 171.5px/161px;
+    border-radius: 50%; 
 }
+
+.circle img{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    background-color: rgba(170, 170, 170, 1);
+    border-radius: 50%; 
+}
+
 
 
 .circle p {
-    margin: 0; /* Remove default margin for the paragraph */
-    padding-top: 10px; /* Space between the circle and text */
-    text-align: center; /* Center text within the circle */
+    margin: 0; 
+    padding-top: 2%; 
+    text-align: center; 
 }
 
 footer .contact-info{
@@ -430,11 +542,11 @@ footer .contact-info{
 
 footer .contact-info .contact-info-content{
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 
 .contact-info-title{
+    font-family: Lalezar;
     text-align: center;
     margin-top: 3%;
 }
@@ -442,102 +554,520 @@ footer .contact-info .contact-info-content{
 .contact-info-content .address, .contact-info-content .email{
     margin: 2% 5% 7% 5%;
     text-align: center;
+    font-family: Montserrat-Bold;
+}
+
+@media (max-width: 271px) {
+    .smaller2{
+        font-size: 25px;
+    }
+
+    .advance-watering-system-title{
+        padding: 0;
+    }
+
+    .beneficiaries{
+        padding: 0;
+    }
+
+    footer{
+        margin-top: 30%;
+    }
 }
 
 
-/* Default styles for larger screens */
-
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .image .beneficiaries {
-        width: 100%; /* Make the width 100% of the viewport width */
-        height: auto; /* Allow the height to adjust proportionally */
-        top: 50%; /* Vertically center the element */
-        left: 50%; /* Horizontally center the element */
-        transform: translate(-50%, -50%); /* Center the element using transform */
-    }
-}
-
-
-/* Universal CSS (No changes here) */
-/* ... */
-
-/* Default styles for larger screens (No changes here) */
-/* ... */
-
-/* Media query for smaller screens (Mobile) */
-@media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Adjust the base font size for smaller screens */
-    }
-
-    nav {
-        height: auto; /* Allow the height to adjust based on content */
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: center; /* Center items vertically */
-    }
-
-    #navbar-title {
-        font-size: 32px; /* Adjust font size for smaller screens */
-    }
-
-    nav ul {
+@media (max-width: 414px) {
+    .contact-info-content{
         display: flex;
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: center; /* Center items vertically */
-        width: auto; /* Allow the width to adjust based on content */
-    }
-
-    nav ul li {
-        display: block; /* Stack navigation items vertically */
-        padding: 10px; /* Add more spacing for touch-friendly buttons */
-    }
-
-    .main-title {
-        flex-direction: column; /* Stack main title content vertically */
-    }
-
-    .title {
-        width: 100%; /* Take the full width on smaller screens */
-        text-align: center; /* Center text */
-    }
-
-    .title h1 {
-        font-size: 8vw; /* Adjust font size for smaller screens */
-    }
-
-    .title h6 {
-        font-size: 3vw; /* Adjust font size for smaller screens */
-    }
-
-    .title-logo img {
-        width: 80%; /* Adjust image width for smaller screens */
-    }
-
-    .context, .beneficiaries, .our-purpose, .project-plan, .meet-the-team {
-        border-radius: 0; /* Remove border radius on smaller screens */
-    }
-
-    .circle-container {
-        flex-direction: column; /* Stack circles vertically for smaller screens */
-    }
-
-    .first-two-circles, .last-three-circles {
-        flex-direction: column; /* Stack circles vertically for smaller screens */
-    }
-
-    .first-two-circles .circle, .last-three-circles .circle {
-        margin: 20px 0; /* Adjust margin for smaller screens */
-    }
-
-    .circle {
-        width: 200px; /* Adjust circle size for smaller screens */
-    }
-
-    .circle div {
-        width: 194px; /* Adjust circle size for smaller screens */
-        height: 182px; /* Adjust circle size for smaller screens */
+        flex-direction: column;
     }
 }
 
+
+@media (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+    
+    body {
+        width: 100%;
+        font-size: 16px; 
+        line-height: 1.5;
+    }
+
+    .body{
+        margin-top: 120px;
+    }
+    
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: auto;
+        background-color: var(--font-color-white);
+        position: fixed;
+        padding: 10px 0;
+        max-width: 100%;
+        position: fixed;
+        z-index: 1000; /* Ensure the navbar appears above other content */
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+    }
+
+    .title-and-logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav .links{
+        width: 100%;
+    }
+
+    .title-and-logo #navbar-logo{
+        width: 60px;
+        height: auto
+    }
+
+    .title-and-logo #navbar-title{
+        font-size: clamp(10px, 15px, 20px);
+    }
+
+    .title-and-logo .smaller{
+        font-size: 10px;
+    }
+
+    nav .links{
+        font-size: clamp(5px, 10px, 15px);
+    }
+
+    nav ul{
+        text-align: center;
+    }
+    
+    .title-and-logo {
+        position: static; 
+    }
+    
+    .title-and-logo #navbar-logo {
+        width: 35px; 
+        height: auto; 
+    }
+    
+    #navbar-title {
+        font-size: 20px; 
+    }
+    
+    nav .links {
+        position: static; 
+        justify-content: space-between; 
+        padding: 0 10px; 
+        max-width: 100%;
+    }
+    
+    .button {
+        width: auto;
+        border-radius: 50%; 
+        margin: 0 5px;
+    }
+    
+    .main-title {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+    
+    .title {
+        width: 80%; 
+    }
+    
+    .title h1 {
+        font-size: 2.5rem; 
+        line-height: 1.2;
+    }
+    
+    .context-title h2, .about-title {
+        font-size: 2rem; 
+        width: 100%;
+    }
+    
+    .context {
+        border-radius: 0; 
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .context-title{
+        padding: 0;
+    }
+
+    
+    .context-content {
+        padding: 0 5%; 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .quality, .sustainable, .efficient{
+        width: 100%;
+        margin: 10% auto;
+    }
+    
+    .context-content h4 {
+        font-size: 1.2rem; 
+    }
+    
+    .context-content p {
+        font-size: 1rem;  
+    }
+
+    .title-logo{
+        padding: 0;
+        width: 80%;
+    }
+
+    
+    .convenient-and-hassle-free{
+        display: flex;
+        flex-direction: column;
+        padding: 0 5%;
+    }
+
+    .convenient-and-hassle-free-title{
+        font-size: 1.5rem;
+    } 
+
+    .convenient-and-hassle-free-content{
+        display: flex;
+        flex-direction: column; 
+        
+    }
+
+    .advance-watering-system{
+        margin-top: 10%;
+        border-radius: 0;
+    }
+
+    #text1, #text2, .convenient-and-hassle-free-content-image{
+        width: 90%;
+        margin: 0 auto;
+        font-size: 1rem;
+        font-family: Prosto-One;
+    }
+
+    .advance-watering-system-title{
+        font-size: 1.5rem;
+    }
+
+    .advance-watering-system-text{
+        font-size: 1.2rem;
+        font-family: Prosto-One;
+    }
+
+    .assistance-log-system{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+        width: 100%;
+    }
+
+    .assistance-log-system-title{
+        padding: 0 10%;
+        font-size: 1.5rem;
+    }
+
+    .assistance-log-system-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .assistance-log-system-content h5{
+        font-family: Prosto-One;
+    }
+
+    #assistance-text{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .title-link{
+        font-size: 3rem;
+        line-height: 1.5;
+        margin-top: 10%;
+    }
+
+    #beneficiaries-text{
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-family: Prosto-One;
+    }
+    
+    .our-purpose{
+        margin: 0;
+    }
+
+    .our-purpose-text p{
+        font-family: Prosto-One;
+        font-size: 1rem;
+    }
+
+    .meet-the-team{
+        margin-top: 20%;
+    }
+
+    .circle-container{
+        margin: 0;
+    }
+
+    .circle-container .circle:not(#circle1){
+        margin-top: 15%;
+    }
+
+    .circle-container .circle:last-child{
+        margin-bottom: 15%;
+    }
+
+    .circle-container .last-three-circles{
+        margin-top: -12%;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .container{
+        margin-right: 0;
+    }
+
+    
+    footer .contact-info {
+        padding: 20px 0; 
+    }
+
+    .contact-info-content p{
+        font-size: small;
+    }
+    
+    .contact-info-content .address, .contact-info-content .email {
+        margin: 10px 5%; 
+        text-align: center;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 852px) { 
+
+    .body{
+        margin-top: 50px;
+    }
+    
+    .title-and-logo #navbar-logo{
+        width: 50px;
+        height: auto;
+    }
+
+    .title-and-logo #navbar-title{
+        font-size: 32px;
+        margin: 0;
+    }
+
+    .title-and-logo .smaller{
+        font-size: 9px;
+        margin: 0;
+    }
+
+    nav .links{
+        font-size: 14px;
+    }
+
+    .context-content h4{
+        font-size: 35px;
+    }
+
+    #text1, #text2{
+        font-size: 25px;
+    }
+
+    .title-link{
+        font-size: 72px;
+    }
+}
+
+@media (min-width: 853px) and (max-width: 972px) { 
+    .title-and-logo #navbar-logo{
+        width: 55px;
+        height: auto
+    }
+
+    .title-and-logo #navbar-title{
+        font-size: 35px;
+    }
+
+    .title-and-logo .smaller{
+        font-size: 11px;
+    }
+
+    nav .links{
+        font-size: 16px;
+    }
+
+    .context-content h4{
+        font-size: 40px;
+    }
+
+    #text1, #text2{
+        font-size: 30px;
+    }
+
+    .title-link{
+        font-size: 78px;
+    }
+}
+
+
+@media (min-width: 973px) and (max-width: 1142px) { 
+
+    .body{
+        margin-top: 50px;
+    }
+
+    .title-and-logo #navbar-logo{
+        width: 60px;
+        height: auto
+    }
+
+    .title-and-logo #navbar-title{
+        font-size: 39px;
+    }
+
+    .title-and-logo .smaller{
+        font-size: 15px;
+    }
+
+    nav .links{
+        font-size: 20px;
+    }
+
+    .title-link{
+        font-size: 88px;
+    }
+}
+
+@media only screen and (min-width: 1143px) and (max-width: 1440px){
+    #navbar-title{
+        font-size: 43px;
+    }
+}
+
+
+@media only screen and (min-width: 1441px) and (max-width: 1740px){
+
+        #navbar-title{
+            font-size: 60px;
+        }
+    
+        .links a{
+            font-size: 42px;
+        }
+    
+        .context{
+            width: 1740px;
+            max-width: 100%; 
+        }
+    
+        .context-title{
+            width: 1740px;
+            max-width: 100%;
+        }
+    
+        .convenient-and-hassle-free{
+            width: 1740px;
+            max-width: 100%;
+        }
+    
+        .convenient-and-hassle-free-content{
+            width: 1740px;
+            max-width: 100%;
+        }
+    
+        .advance-watering-system{
+            width: 1740px;
+            max-width: 100%;
+        }
+    
+        .assistance-log-system{
+            width: 1740px;
+            max-width: 100%;
+            margin-top: 10%;
+        }
+    
+        .about-the-project{
+            width: 1740px;
+            max-width: 100%;
+        }
+    
+        .our-purpose{
+            width: 1740px;
+            max-width: 100%;
+        }
+}
+
+  
+@media only screen and (min-width: 1741px) {
+
+    #navbar-title{
+        font-size: 70px;
+    }
+
+    .links a{
+        font-size: 50px;
+    }
+
+    .context{
+        width: 1920px;
+        max-width: 100%; 
+    }
+
+    .context-title{
+        width: 1920px;
+        max-width: 100%;
+    }
+
+    .convenient-and-hassle-free{
+        width: 1920px;
+        max-width: 100%;
+    }
+
+    .convenient-and-hassle-free-content{
+        width: 1920px;
+        max-width: 100%;
+    }
+
+    .advance-watering-system{
+        width: 1920px;
+        max-width: 100%;
+    }
+
+    .assistance-log-system{
+        width: 1920px;
+        max-width: 100%;
+        margin-top: 10%;
+    }
+
+    .about-the-project{
+        width: 1920px;
+        max-width: 100%;
+    }
+
+    .our-purpose{
+        width: 1920px;
+        max-width: 100%;
+    }
+
+    
+}
+  
+  
