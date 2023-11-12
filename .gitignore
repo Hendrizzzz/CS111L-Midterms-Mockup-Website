@@ -1,3 +1,39 @@
-/global.css
-/index.css
-/index1.html
+# Node.js
+node_modules/
+
+# Package lock files
+package-lock.json
+yarn.lock
+
+# Environment-specific files
+.env
+.env.local
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+
+# Compiled files
+*.min.js
+*.min.css
+
+# Log files
+*.log
+
+# Dependency lock files
+yarn.lock
+package-lock.json
+
+# Temporary files
+*.tmp
+
+# Personal configuration files
+config.js
+
+# Typed.js library files
+typed.umd.js
+typed.umd.js.map
+
+# ScrollReveal.js library files
+scrollreveal.min.js
+scrollreveal.min.map
