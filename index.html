@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future Farming</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
 </head>
 <body>
     <div id="navbar">
@@ -15,21 +15,24 @@
             </div>
             <div class="links">
                 <ul>
-                    <li><a href="#about"><b>ABOUT</b></a></li>
-                    <li><a href="#team"><b>TEAM</b></a></li>
-                    <li><a href="#contact"><b>CONTACT</b></a></li>
-                    <li id="mock-up-button"><a href=""><b>MOCKUP</b></a></li>
+                    <div class="anchor-container">
+                        <li id="aboutNav"><a href="#about">ABOUT</a></li>
+                        <li id="teamNav"><a href="#team">TEAM</a></li>
+                        <li id="contactNav"><a href="#contact">CONTACT</a></li>
+                        <li id="home"><a href="index.html">HOME</a></li>
+                        <li id="mock-up-button">MOCKUP</li>
+                    </div>
                 </ul>
             </div>
         </nav>
     </div>
 
-        <div class="body">
+        <div class="body" id="body">
         <main>
             <div class="main-title">
                 <div class="title">
                     <h1>Future Farming</h1>
-                    <h6>The Future of Farming</h6>
+                    <h6>The Future <span class="typewriter"></span></h6>
                 </div>
                 <div class="title-logo">
                     <img src="images/biglogo.png" id="main-logo" alt="This is an image of the logo of the Future Farming">
@@ -106,17 +109,17 @@
                             <div class="project-plan-container">
                                 <div class="project-plan-title"><h2 class="about-title">Project Plan</h2></div>
                                 <div class="project-plan">
-                                    <img src="images/259b5a38212cf8d126f4054f8a90bed7.jpg" alt="This is an image of plants inside a greenhouse">
+                                    <img id="project-plan-image" src="images/259b5a38212cf8d126f4054f8a90bed7.jpg" alt="This is an image of plants inside a greenhouse">
                                     <div class="project-plan-list">
                                         <div class="row-1">
-                                            <div class="container">Research and Development: Develop and test smart greenhouse technology.</div>
-                                            <div class="container">Education and Training: Provide farmers with the knowledge and training to use the technology effectively.</div>
-                                            <div class="container">Implementation: Assist farmers in setting up and operating smart greenhouses.</div>                                            
+                                            <div class="container" id="list1">Research and Development: Develop and test smart greenhouse technology.</div>
+                                            <div class="container" id="list2">Education and Training: Provide farmers with the knowledge and training to use the technology effectively.</div>
+                                            <div class="container" id="list3">Implementation: Assist farmers in setting up and operating smart greenhouses.</div>                                            
                                         </div>
                                         <div class="row-2">
-                                            <div class="container">Monitoring and Support: Continuously monitor and offer support to ensure successful crop cultivation.</div>
-                                            <div class="container">Data Collection: Gather data on crop yields, resource usage, and environmental impact.</div>
-                                            <div class="container">Expansion: Scale the project to reach more farmers and regions.</div>
+                                            <div class="container" id="list4">Monitoring and Support: Continuously monitor and offer support to ensure successful crop cultivation.</div>
+                                            <div class="container" id="list5">Data Collection: Gather data on crop yields, resource usage, and environmental impact.</div>
+                                            <div class="container" id="list6">Expansion: Scale the project to reach more farmers and regions.</div>
                                         </div>
                                         
                                     </div>
@@ -125,20 +128,43 @@
                             </div>
                     </div>
             </div>
-
             <div class="meet-the-team" id="team">
                 <h2 class="title-link">Meet The Team</h2>
                 <div class="circle-container">
                     <div class="first-two-circles">
-                        <div class="circle" id="circle1"><img src="images/5.jpg" alt="This is a photo of Jim Hendrix Bag-eo"><p>Jim Hendrix Bag-eo</p></div>
-                        <div class="circle"><img src="images/4.jpeg" alt="This is a photo of Byron Smith Valdez"><p>Byron Smith Valdez</p></div>
+                        <div class="c">
+                            <div class="circle" id="circle1">
+                                <img src="images/5.jpg" alt="This is a photo of Jim Hendrix Bag-eo">
+                                <p>Jim Hendrix Bag-eo</p>
+                            </div>
+                        </div>
+                        <div class="c">
+                            <div class="circle" id="circle2">
+                                <img src="images/4.jpeg" alt="This is a photo of Byron Smith Valdez">
+                                <p>Byron Smith Valdez</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="last-three-circles">
-                        <div class="circle"><img src="images/1.jpeg" alt="This is a photo of Aaliyah Martinez"><p>Aaliyah Martinez</p></div>
-                        <div class="circle"><img src="images/3.png" alt="This is a photo of Jazreil Jaron Sabog"><p>Jazreil Jaron Sabog</p></div>
-                        <div class="circle"><img src="images/2.jpg" alt="This is a photo of Krenz Darrel Casilen"><p>Krenz Darrel Casilen</p></div>
+                        <div class="c">
+                            <div class="circle" id="circle3">
+                                <img src="images/1.jpeg" alt="This is a photo of Aaliyah Martinez">
+                                <p>Aaliyah Martinez</p>
+                            </div>
+                        </div>
+                        <div class="c">
+                            <div class="circle" id="circle4">
+                                <img src="images/3.png" alt="This is a photo of Jazreil Jaron Sabog">
+                                <p>Jazreil Jaron Sabog</p>
+                            </div>
+                        </div>
+                        <div class="c">
+                            <div class="circle" id="circle5">
+                                <img src="images/2.jpg" alt="This is a photo of Krenz Darrel Casilen">
+                                <p>Krenz Darrel Casilen</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
             </div>
 
             <footer>
@@ -159,6 +185,19 @@
             </footer>
         </main>
     </div>
-        
+
+    <div class="body2" id="body2">
+        <div class="background1"></div>
+        <div class="background2"></div>
+        <img class="Image1" src="../images/Log-In Page Screenshot2.png">
+        <img class="Image2" src="../images/Control Page Screenshot2.png">
+        <img class="Image3" src="../images/Log Page Screenshot 2.png">
+    </div>
+
+    <script src="others/scrollreveal.min.js"></script>
+    <script src="others/typed.umd.js"></script>
+
+
+    <script src="script.js"></script>
 </body>
 </html>

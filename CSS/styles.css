@@ -1,16 +1,16 @@
 @font-face {
     font-family: Prosto-One;
-    src: url(fonts/ProstoOne-Regular.ttf);
+    src: url(../fonts/ProstoOne-Regular.ttf);
 }
 
 @font-face {
     font-family: Montserrat-Bold;
-    src: url(fonts/Montserrat-Bold.ttf);
+    src: url(../fonts/Montserrat-Bold.ttf);
 }
 
 @font-face {
     font-family: Lalezar;
-    src: url(fonts/Lalezar-Regular.ttf);
+    src: url(../fonts/Lalezar-Regular.ttf);
 }
 
 :root {
@@ -34,6 +34,10 @@ body{
     margin: 0;
 }
 
+.body{
+    overflow: hidden;
+}
+
 nav{
     position: fixed;
     display: flex;
@@ -46,6 +50,7 @@ nav{
     max-width: 100%;
     margin: 0 auto;
     padding: 3%;
+    z-index: 999;
 }
 
 .title-and-logo{
@@ -79,41 +84,89 @@ nav{
 nav .links{
     position: absolute;
     right: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex-wrap: wrap;
     margin: 0;
     font-family: Lalezar;
     font-size: 25px;
     width: 50%;
 }
 
-.button a{
-    color: white;
-    margin: 0 1.5%;
+.anchor-container{
+    display: flex;
 }
 
-nav ul li {
-    display: inline;
-    padding: 2%;
-}
-
-nav ul{
-    width: 100%;
-    text-align: right;
+nav .links ul{
     padding: 0;
 }
 
-nav ul li a{
+nav ul li{
+    list-style: none;
+}
+
+nav ul{
+    right: 0;
+    width: 100%;
+    text-align: right;
+    padding: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li{
+    margin: 0 4%;
+}
+
+.links ul li{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+}
+
+.links li{
     text-decoration-line: none;
     color: var(--font-color-green);
+    opacity: 85%;
     font-weight: bolder;
     font-size: 120%;
 }
 
-nav ul li a:hover{
-    color: red;
+
+.links ul li a {
+    position: relative;
+    color: var(--font-color-green); 
+    text-decoration: none; 
+}
+
+.links ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--font-color-green);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; /* Add transition effect */
+}
+
+.links ul li a:hover::after {
+    width: 100%;
+}
+
+
+#mock-up-button:hover{
+    background-color: var(--font-color-green);
+    color: var(--font-color-white);
+    border-radius: 50%;
+    border: 0 solid var(--font-color-white);
+    padding: 0 1.3%;
+    opacity: 100%;
+    cursor: pointer;
+}
+
+#home{
+    display: none;
+    margin-right: 5%;
 }
 
 .main-title {
@@ -121,11 +174,13 @@ nav ul li a:hover{
     align-items: center; 
     justify-content: space-between; 
     max-width: 1440px;
-    margin: auto
+    margin: auto;
+    overflow: hidden;
 }
 
 .title {
-    width: 30%; 
+    margin-top: 0;
+    width: 39%; 
 }
 
 .title h1 {
@@ -144,6 +199,7 @@ nav ul li a:hover{
     font-family: Prosto-One;
     font-size: 24px; 
     margin-top: 0;
+    height: 70px;
 }
 
 .title-logo{
@@ -176,6 +232,7 @@ nav ul li a:hover{
     background-color: rgba(255, 255, 255, 1);
     border-radius: 350px 0px 0px 350px;
     background: linear-gradient(180deg, rgb(0, 153, 85) 29.58%, rgba(0, 153, 85, 0) 100%);
+    overflow: hidden;
 }
 
 .context-title h2, .about-title{
@@ -454,7 +511,7 @@ nav ul li a:hover{
 }
 
 .meet-the-team {
-    margin: 2%;
+    margin: 0;
 }
 
 .container{
@@ -497,12 +554,12 @@ nav ul li a:hover{
     height: auto;
 }
 
-.first-two-circles .circle{
+.first-two-circles .c{
     margin: 4% 6%;
 }
 
-.last-three-circles .circle{
-    margin: 4%;
+.last-three-circles .c{
+    margin: 6%;
 }
 
 .circle {
@@ -511,12 +568,10 @@ nav ul li a:hover{
     max-width: 250px;   
 }
 
-.circle div {
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    background-color: rgba(170, 170, 170, 1);
-    border-radius: 50%; 
+.c{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .circle img{
@@ -525,9 +580,13 @@ nav ul li a:hover{
     height: 100%;
     background-color: rgba(170, 170, 170, 1);
     border-radius: 50%; 
+    margin: 0 auto;
 }
 
-
+.c:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 .circle p {
     margin: 0; 
@@ -557,13 +616,141 @@ footer .contact-info .contact-info-content{
     font-family: Montserrat-Bold;
 }
 
-@media (max-width: 271px) {
+@media (min-width: 120px) and (max-width: 199px){
+    #body{
+        margin-top: 120px;
+    }
+
+    #body p, .project-plan-list{
+        font-size: 9px;
+    }
+
+    #body h5{
+        font-size: 13px!important;
+    }
+
+    #body h4{
+        font-size: 15px!important;
+    }
+
+    .title-and-logo #navbar-logo{
+        display: none;
+    }
+
+    .title-and-logo #navbar-title{
+        font-size: clamp(10px, 15px, 15px)!important;
+    }
+
+    .title-and-logo .smaller{
+        font-size: 7px;
+    }
+
+    .smaller{
+        display: none;
+    }
+
     .smaller2{
         font-size: 25px;
     }
 
     .advance-watering-system-title{
         padding: 0;
+    }
+
+    .links ul li{
+        font-size: 7px;
+        text-align: left;
+    }
+
+    .links ul li:nth-of-type(3){
+        margin: 0 4px 0 0;
+    }
+
+    .title{
+        margin-bottom: 30px;
+    }
+
+    .title h1{
+        font-size: 20px!important;
+    }
+
+    .title h6{
+        font-size: 10px!important;
+    }
+
+    .beneficiaries{
+        padding: 0;
+    }
+
+    .context-title h2,
+    .context-title span,
+    .convenient-and-hassle-free-title,
+    .convenient-and-hassle-free-title h2,
+    .convenient-and-hassle-free-title span,
+    .advance-watering-system-title h2,
+    .assistance-log-system-title h2, 
+    .assistance-log-system-title span,
+    .about-title,
+    .title-link, 
+    .beneficiaries h2 span
+    {
+        font-size: 18px!important;
+    }
+
+    .circle {
+        width: 100%;
+        height: 100px; 
+        max-width: 250px;   
+    }
+
+   
+}
+
+
+@media (min-width: 200px) and (max-width: 271px) {
+    #body{
+        margin-top: 120px;
+    }
+
+    .title-and-logo #navbar-logo{
+        width: 20px!important;
+        height: auto
+    }
+
+    .title-and-logo #navbar-title{
+        font-size: clamp(10px, 15px, 15px)!important;
+    }
+
+    .title-and-logo .smaller{
+        font-size: 7px;
+    }
+
+    .smaller{
+        font-size: 7px!important;
+    }
+
+    .smaller2{
+        font-size: 25px;
+    }
+
+    .advance-watering-system-title{
+        padding: 0;
+    }
+
+    .links ul li{
+        font-size: 8px;
+    }
+
+    .title{
+        margin-bottom: 50px;
+    }
+
+    .title h1{
+        font-size: 40px!important;
+    }
+
+    .title h6{
+        font-size: 15px!important;
     }
 
     .beneficiaries{
@@ -573,8 +760,74 @@ footer .contact-info .contact-info-content{
     footer{
         margin-top: 30%;
     }
+
+    .anchor-container{
+        width: 100%;
+    }
 }
 
+@media (min-width: 271px) and (max-width: 323px) {
+
+    .title-and-logo #navbar-logo{
+        width: 50px;
+        height: auto
+    }
+
+    .title-and-logo #navbar-title{
+        font-size: clamp(10px, 15px, 15px)!important;
+    }
+
+    .title-and-logo .smaller{
+        font-size: 7px;
+    }
+
+    nav .links{
+        font-size: clamp(5px, 11px, 11px)!important;
+    }
+
+    .title{
+        margin-bottom: 70px;
+    }
+
+    .anchor-container{
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 324px) and (max-width: 414px) {
+
+    .title-and-logo #navbar-logo{
+        width: 60px;
+        height: auto
+    }
+
+    .title-and-logo #navbar-title{
+        font-size: clamp(10px, 20px, 20px)!important;
+    }
+
+    .title-and-logo .smaller{
+        font-size: 10px;
+    }
+
+    .title h6{
+        font-size: 5px;
+    }
+
+    .title{
+        margin-bottom: 40px;
+    }
+
+    .anchor-container{
+        width: 100%;
+    }
+    
+    
+
+    nav .links{
+        font-size: clamp(5px, 10px, 10px)!important;
+    }
+}
 
 @media (max-width: 414px) {
     .contact-info-content{
@@ -606,15 +859,16 @@ footer .contact-info .contact-info-content{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         height: auto;
         background-color: var(--font-color-white);
         position: fixed;
         padding: 10px 0;
         max-width: 100%;
         position: fixed;
-        z-index: 1000; /* Ensure the navbar appears above other content */
-        transform: translateY(0);
-        transition: transform 0.3s ease;
+        z-index: 1000;
+        width: 100%;
     }
 
     .title-and-logo{
@@ -625,7 +879,30 @@ footer .contact-info .contact-info-content{
 
     nav .links{
         width: 100%;
+        font-size: clamp(5px, 14px, 15px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: static; 
     }
+
+    nav .links ul{
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .links ul li{
+        width: 25%;
+        text-align: center;
+    }
+
+    .anchor-container{
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+    }
+
+
 
     .title-and-logo #navbar-logo{
         width: 60px;
@@ -633,15 +910,11 @@ footer .contact-info .contact-info-content{
     }
 
     .title-and-logo #navbar-title{
-        font-size: clamp(10px, 15px, 20px);
+        font-size: clamp(10px, 35px, 35px);
     }
 
     .title-and-logo .smaller{
         font-size: 10px;
-    }
-
-    nav .links{
-        font-size: clamp(5px, 10px, 15px);
     }
 
     nav ul{
@@ -660,19 +933,7 @@ footer .contact-info .contact-info-content{
     #navbar-title {
         font-size: 20px; 
     }
-    
-    nav .links {
-        position: static; 
-        justify-content: space-between; 
-        padding: 0 10px; 
-        max-width: 100%;
-    }
-    
-    .button {
-        width: auto;
-        border-radius: 50%; 
-        margin: 0 5px;
-    }
+
     
     .main-title {
         flex-direction: column; 
@@ -682,11 +943,16 @@ footer .contact-info .contact-info-content{
     
     .title {
         width: 80%; 
+        height: 60px;
     }
     
     .title h1 {
         font-size: 2.5rem; 
         line-height: 1.2;
+    }
+
+    .title h6{
+        font-size: 1rem;
     }
     
     .context-title h2, .about-title {
@@ -723,6 +989,7 @@ footer .contact-info .contact-info-content{
     .context-content p {
         font-size: 1rem;  
     }
+    
 
     .title-logo{
         padding: 0;
@@ -867,6 +1134,10 @@ footer .contact-info .contact-info-content{
     .title-and-logo #navbar-logo{
         width: 50px;
         height: auto;
+    }
+
+    .title-and-logo{
+        width: 50%;
     }
 
     .title-and-logo #navbar-title{
@@ -1026,6 +1297,10 @@ footer .contact-info .contact-info-content{
         font-size: 50px;
     }
 
+    .main-title{
+        margin-top: 8%;
+    }
+
     .context{
         width: 1920px;
         max-width: 100%; 
@@ -1071,3 +1346,170 @@ footer .contact-info .contact-info-content{
 }
   
   
+
+
+.body2{
+    display: none;
+}
+
+.body2{
+    height: 540rem;
+    background-color: white;
+    width:100%;
+}
+
+div.background1{
+    background: linear-gradient(180deg, #009955 -0%, rgba(0, 153, 85, 0) 100%);
+    height: 250rem;
+    position: absolute;
+    top: 6.1rem;
+    width: 100%;
+} 
+
+div.background2{
+    background: linear-gradient(360deg, #009955 -0%, rgba(0, 153, 85, 0) 100%);
+    height: 350rem;
+    position: absolute;
+    top: 190rem;
+    width: 100%;
+}
+
+.Image1{
+    position:absolute;
+    object-fit:contain;
+    top:10rem;
+    width: 100%;
+    height:1700px;
+    padding:80px;
+}
+
+.Image2{
+    position:absolute;
+    object-fit:contain;
+    top:110rem;
+    width: 100%;
+    height:3700px;
+    padding:80px
+}
+
+.Image3{
+    position:absolute;
+    object-fit:contain;
+    top:340rem;
+    height:2800px;
+    width: 100%;
+    padding: 80px;
+}
+
+@media(max-width:1800px){/*1ST MEDIA SCREEN SIZE (BODY)*/
+    .body2{
+        height: 380rem;
+        background-color: bl;
+        width:100%;
+        transition: .5s;
+    }
+
+    div.background1{
+        top: 5.1rem;
+        height: 180rem;
+        transition: .5s;
+    }
+
+    div.background2{
+        position: absolute;
+        top: 180rem;
+        height: 220rem;
+        width: 100%;
+    }
+    
+    .Image1{
+        top:10rem;
+        height:1100px;
+        transition: .5s;
+    }
+    
+    .Image2{
+        top:90rem;
+        height:2700px;
+        transition: .5s;
+    }
+    
+    .Image3{
+        top:240rem;
+        height:2600px;
+        transition: .5s;
+    }
+
+}@media(max-width:1300px){/*2ND MEDIA SCREEN SIZE (BODY)*/
+    .body2{
+        height:360rem;
+        width:100%;
+        transition: .5s;
+    }
+
+    div.background1{
+        top: 4.4rem;
+        height: 180rem;
+        transition: .5s;
+    }
+    
+    div.background2{
+        position: absolute;
+        top: 190rem;
+        height: 160rem;
+        width: 100%;
+    }
+    
+    .Image1{
+        top:10rem;
+        height:1000px;
+        transition: .5s;
+    }
+    
+    .Image2{
+        top:70rem;
+        transition: .5s;
+    }
+    
+    .Image3{
+        top:200rem;
+        transition: .5s;
+    }
+
+
+}@media(max-width:900px){/*3RD MEDIA SCREEN SIZE(BODY)*/
+    .body2{
+        height: 260rem;
+        width:100%;
+        transition: .5s;
+    }
+    
+    div.background1{
+        top: 3.1rem;
+        height: 190rem;
+        transition: .5s;
+    }
+    
+    div.background2{
+        position: absolute;
+        top: 145rem;
+        height: 125rem;
+        width: 100%;
+        transition: .5s;
+    }
+    
+    .Image1{
+        top:0rem;
+        transition: .5s;
+    }
+    
+    .Image2{
+        top:18rem;
+        transition: .5s;
+    }
+    
+    .Image3{
+        top:110rem;
+        transition: .5s;
+    }
+}
