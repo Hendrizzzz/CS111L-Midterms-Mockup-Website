@@ -20,7 +20,6 @@
     --font-size2: 20px;
 }
 
-
 * {
     box-sizing: border-box;
 }
@@ -96,7 +95,6 @@ nav .links{
     margin-left: 5%; 
 }
 
-
 nav ul{
     right: 0;
     width: 100%;
@@ -130,7 +128,6 @@ nav ul{
     justify-content: end;
 }
 
-
 .links ul li a {
     position: relative;
     color: var(--font-color-green); 
@@ -157,7 +154,6 @@ nav ul{
     width: 100%;
 }
 
-
 #mock-up-button:hover {
     background-color: var(--font-color-green);
     color: var(--font-color-white);
@@ -166,7 +162,6 @@ nav ul{
     opacity: 100%;
     cursor: pointer;
 }
-
 
 #home{
     display: none;
@@ -622,7 +617,6 @@ footer .contact-info .contact-info-content{
 }
 
 
-
 @media (max-width: 119px){
     #body{
         margin-top: 70px;
@@ -730,10 +724,7 @@ footer .contact-info .contact-info-content{
     footer{
         margin-top: 30px;
     }
-
 }
-
-
 
 
 @media (min-width: 120px) and (max-width: 199px){
@@ -834,7 +825,6 @@ footer .contact-info .contact-info-content{
     footer{
         margin-top: 30px;
     }
-   
 }
 
 
@@ -905,6 +895,7 @@ footer .contact-info .contact-info-content{
     }
 }
 
+
 @media (min-width: 271px) and (max-width: 323px) {
 
     .title-and-logo #navbar-logo{
@@ -965,12 +956,11 @@ footer .contact-info .contact-info-content{
         width: 100%;
     }
     
-    
-
     nav .links{
         font-size: clamp(5px, 10px, 10px)!important;
     }
 }
+
 
 @media (max-width: 414px) {
     .contact-info-content{
@@ -1076,8 +1066,7 @@ footer .contact-info .contact-info-content{
     #navbar-title {
         font-size: 20px; 
     }
-
-    
+ 
     .main-title {
         flex-direction: column; 
         align-items: center;
@@ -1136,7 +1125,6 @@ footer .contact-info .contact-info-content{
         padding: 0;
         width: 80%;
     }
-
     
     .convenient-and-hassle-free{
         display: flex;
@@ -1250,7 +1238,6 @@ footer .contact-info .contact-info-content{
     .container{
         margin-right: 0;
     }
-
     
     footer .contact-info {
         padding: 20px 0; 
@@ -1265,6 +1252,7 @@ footer .contact-info .contact-info-content{
         text-align: center;
     }
 }
+
 
 @media (min-width: 769px) and (max-width: 852px) { 
 
@@ -1307,6 +1295,7 @@ footer .contact-info .contact-info-content{
         font-size: 72px;
     }
 }
+
 
 @media (min-width: 853px) and (max-width: 972px) { 
     .title-and-logo #navbar-logo{
@@ -1372,6 +1361,7 @@ footer .contact-info .contact-info-content{
     }
 }
 
+
 @media only screen and (min-width: 1143px) and (max-width: 1440px){
     #navbar-title{
         font-size: 43px;
@@ -1381,54 +1371,54 @@ footer .contact-info .contact-info-content{
 
 @media only screen and (min-width: 1441px) and (max-width: 1740px){
 
-        #navbar-title{
-            font-size: 60px;
-        }
-    
-        .links a, #mock-up-button{
-            font-size: 40px;
-        }
-    
-        .context{
-            width: 1740px;
-            max-width: 100%; 
-        }
-    
-        .context-title{
-            width: 1740px;
-            max-width: 100%;
-        }
-    
-        .convenient-and-hassle-free{
-            width: 1740px;
-            max-width: 100%;
-        }
-    
-        .convenient-and-hassle-free-content{
-            width: 1740px;
-            max-width: 100%;
-        }
-    
-        .advance-watering-system{
-            width: 1740px;
-            max-width: 100%;
-        }
-    
-        .assistance-log-system{
-            width: 1740px;
-            max-width: 100%;
-            margin-top: 200px;
-        }
-    
-        .about-the-project{
-            width: 1740px;
-            max-width: 100%;
-        }
-    
-        .our-purpose{
-            width: 1740px;
-            max-width: 100%;
-        }
+    #navbar-title{
+        font-size: 60px;
+    }
+
+    .links a, #mock-up-button{
+        font-size: 40px;
+    }
+
+    .context{
+        width: 1740px;
+        max-width: 100%; 
+    }
+
+    .context-title{
+        width: 1740px;
+        max-width: 100%;
+    }
+
+    .convenient-and-hassle-free{
+        width: 1740px;
+        max-width: 100%;
+    }
+
+    .convenient-and-hassle-free-content{
+        width: 1740px;
+        max-width: 100%;
+    }
+
+    .advance-watering-system{
+        width: 1740px;
+        max-width: 100%;
+    }
+
+    .assistance-log-system{
+        width: 1740px;
+        max-width: 100%;
+        margin-top: 200px;
+    }
+
+    .about-the-project{
+        width: 1740px;
+        max-width: 100%;
+    }
+
+    .our-purpose{
+        width: 1740px;
+        max-width: 100%;
+    }
 }
 
   
@@ -1486,9 +1476,4 @@ footer .contact-info .contact-info-content{
         width: 1920px;
         max-width: 100%;
     }
-    
 }
-  
-  
-
-
