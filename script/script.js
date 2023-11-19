@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   };
 
-  // Smoothly scroll to the top when the button is clicked
+  // Smoothly scroll to the top when the 'arrow up' button is clicked
   backToTopButton.onclick = function () {
       document.body.scrollIntoView({ behavior: 'smooth' });
   };
