@@ -198,3 +198,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var backToTopButton = document.getElementById('backToTopBtn');
+
+  // Show or hide the button based on scroll position
+  window.onscroll = function () {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          backToTopButton.style.display = 'block';
+      } else {
+          backToTopButton.style.display = 'none';
+      }
+  };
+
+  // Smoothly scroll to the top when the button is clicked
+  backToTopButton.onclick = function () {
+      document.body.scrollIntoView({ behavior: 'smooth' });
+  };
+});
+

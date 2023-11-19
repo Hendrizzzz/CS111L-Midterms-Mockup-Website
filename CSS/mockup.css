@@ -14,7 +14,7 @@
     height: 100%;
     width: 100%;
     margin-top: 18%;
-    box-sizing: border-box; /* Add this line to include padding and border in the element's total width and height */
+    box-sizing: border-box; 
 }
 
 .section {
@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%; /* Set the width to 100% */
+    width: 100%; 
 }
 
 .section h2 {
@@ -34,7 +34,7 @@
 .image {
     width: 80%;
     margin: 0 auto 10% auto;
-    max-width: 100%; /* Ensure the image does not exceed its container's width */
+    max-width: 100%; 
 }
 
 @media screen and (max-width: 150px) {
