@@ -44,11 +44,11 @@ nav{
     align-items: center;
     position: fixed;
     background-color: var(--font-color-white);
-    height: 5%;
+    height: auto;
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 1%;
+    padding: 2% 0;
     z-index: 999;
 }
 
@@ -59,6 +59,7 @@ nav{
     position: absolute;
     left: 0;
     width: 50%;
+    margin: 0;
 }
 
 #navbar-logo{
@@ -85,7 +86,7 @@ nav .links{
     right: 0;
     margin: 0;
     font-family: Lalezar;
-    font-size: 25px;
+    font-size: 20px;
     width: 50%;
     display: flex;
     justify-content: end;
@@ -104,7 +105,7 @@ nav ul{
     padding: 0;
     display: flex;
     justify-content: end;
-    
+    height: auto;
 }
 
 .links ul li{
@@ -1340,7 +1341,7 @@ footer .contact-info .contact-info-content{
     }
     
     .title-and-logo #navbar-logo{
-        width: 50px;
+        width: 40px;
         height: auto;
     }
 
@@ -1349,7 +1350,7 @@ footer .contact-info .contact-info-content{
     }
 
     .title-and-logo #navbar-title{
-        font-size: 32px;
+        font-size: 30px;
         margin: 0;
     }
 
@@ -1384,12 +1385,12 @@ footer .contact-info .contact-info-content{
 
 @media (min-width: 853px) and (max-width: 972px) { 
     .title-and-logo #navbar-logo{
-        width: 55px;
+        width: 45px;
         height: auto
     }
 
     .title-and-logo #navbar-title{
-        font-size: 35px;
+        font-size: 33px;
     }
 
     .title-and-logo .smaller{
@@ -1420,21 +1421,12 @@ footer .contact-info .contact-info-content{
         margin-top: 50px;
     }
 
-    .title-and-logo #navbar-logo{
-        width: 60px;
-        height: auto
-    }
-
     .title-and-logo #navbar-title{
-        font-size: 37px;
+        font-size: 40px;
     }
 
     .title-and-logo .smaller{
-        font-size: 14px;
-    }
-
-    nav {
-        font-size: 20px;
+        font-size: 13px;
     }
 
     .title-link{
