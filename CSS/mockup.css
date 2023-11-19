@@ -1,177 +1,50 @@
-
-
-.body2{
+.body2 {
     display: none;
-    height: 540rem;
-    background-color: white;
-    width:100%;
-    overflow: hidden;
-}
-
-div.background1{
-    background: linear-gradient(180deg, #009955 -0%, rgba(0, 153, 85, 0) 100%);
-    height: 250rem;
-    position: absolute;
-    top: 6.1rem;
     width: 100%;
-    overflow: hidden;
-} 
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(to bottom, rgb(0, 153, 85), #ffffff, rgb(0, 153, 85));
+}
 
-div.background2{
-    background: linear-gradient(360deg, #009955 -0%, rgba(0, 153, 85, 0) 100%);
-    height: 350rem;
-    position: absolute;
-    top: 190rem;
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
     width: 100%;
-    overflow: hidden;
+    margin-top: 18%;
+    box-sizing: border-box; /* Add this line to include padding and border in the element's total width and height */
 }
 
-.Image1{
-    position:absolute;
-    object-fit:contain;
-    top:10rem;
-    width: 100%;
-    height:1700px;
-    padding:80px;
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%; /* Set the width to 100% */
 }
 
-.Image2{
-    position:absolute;
-    object-fit:contain;
-    top:110rem;
-    width: 100%;
-    height:3700px;
-    padding:80px
+.section h2 {
+    font-family: Lalezar;
+    color: black;
+    font-size: clamp(0.25rem, 0.1353rem + 3.6691vw, 3.4375rem);
 }
 
-.Image3{
-    position:absolute;
-    object-fit:contain;
-    top:340rem;
-    height:2800px;
-    width: 100%;
-    padding: 80px;
+.image {
+    width: 80%;
+    margin: 0 auto 10% auto;
+    max-width: 100%; /* Ensure the image does not exceed its container's width */
 }
 
-@media(max-width:1800px){/*1ST MEDIA SCREEN SIZE (BODY)*/
-    .body2{
-        height: 380rem;
-        width:100%;
-        transition: .5s;
-    }
-
-    div.background1{
-        top: 5.1rem;
-        height: 180rem;
-        transition: .5s;
-    }
-
-    div.background2{
-        position: absolute;
-        top: 180rem;
-        height: 220rem;
-        width: 100%;
-    }
-    
-    .Image1{
-        top:10rem;
-        height:1100px;
-        transition: .5s;
-    }
-    
-    .Image2{
-        top:90rem;
-        height:2700px;
-        transition: .5s;
-    }
-    
-    .Image3{
-        top:240rem;
-        height:2600px;
-        transition: .5s;
+@media screen and (max-width: 150px) {
+    .content {
+        margin-top: 35px;
     }
 }
 
-@media (max-width: 400px){
-    .Image1, .Image2, .Image3{
-        margin: 0!important;
-    }
-}
-
-@media(max-width:1300px){/*2ND MEDIA SCREEN SIZE (BODY)*/
-    .body2{
-        height:360rem;
-        width:100%;
-        transition: .5s;
-    }
-
-    div.background1{
-        top: 4.4rem;
-        height: 180rem;
-        transition: .5s;
-    }
-    
-    div.background2{
-        position: absolute;
-        top: 190rem;
-        height: 160rem;
-        width: 100%;
-    }
-
-    .Image1, .Image2, .Image3{
-        margin: 0!important;
-    }
-    
-    .Image1{
-        top:10rem;
-        height:1000px;
-        transition: .5s;
-    }
-    
-    .Image2{
-        top:70rem;
-        transition: .5s;
-    }
-    
-    .Image3{
-        top:200rem;
-        transition: .5s;
-    }
-}
-
-@media(max-width:900px){/*3RD MEDIA SCREEN SIZE(BODY)*/
-    .body2{
-        height: 260rem;
-        width:100%;
-        transition: .5s;
-    }
-    
-    div.background1{
-        top: 3.1rem;
-        height: 190rem;
-        transition: .5s;
-    }
-    
-    div.background2{
-        position: absolute;
-        top: 145rem;
-        height: 125rem;
-        width: 100%;
-        transition: .5s;
-    }
-    
-    .Image1{
-        top:0rem;
-        transition: .5s;
-    }
-    
-    .Image2{
-        top:18rem;
-        transition: .5s;
-    }
-    
-    .Image3{
-        top:110rem;
-        transition: .5s;
+@media screen and (min-width: 151px) and (max-width: 768px) {
+    .content {
+        margin-top: 25%;
     }
 }

@@ -48,7 +48,7 @@ nav{
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 3%;
+    padding: 1%;
     z-index: 999;
 }
 
@@ -62,7 +62,7 @@ nav{
 }
 
 #navbar-logo{
-    width: 87px; 
+    width: 55px; 
     height: auto;
 }
 
@@ -237,7 +237,7 @@ nav ul{
 .context-title h2, .about-title{
     text-align: center;
     color: white;
-    font-size: 60px;
+    font-size: 50px;
     margin: 2%;
     font-family: Prosto-One;
 }
@@ -256,7 +256,7 @@ nav ul{
 
 .context-content h4{
     font-family: Montserrat-Bold;
-    font-size: 45px;
+    font-size: 40px;
     margin: 0;
 }
 
@@ -270,12 +270,13 @@ nav ul{
     flex-wrap: wrap;
     width: 30%;
     color: white;
+    line-height: 2;
 }
 
 .title-link{
     color: var(--font-color-green);
     text-align: center;
-    font-size: 100px;
+    font-size: 60px;
     font-style: normal;
     font-weight: 400;
     line-height: 120px; /* 120% */
@@ -290,7 +291,7 @@ nav ul{
 .convenient-and-hassle-free-title, .assistance-log-system-title{
     text-align: center;
     color: var(--font-color-green);
-    font-size: 40px;
+    font-size: 35px;
     font-family: Prosto-One;
 }
 
@@ -312,7 +313,7 @@ nav ul{
     width: 25%;
     text-align: center;
     color: var(--font-color-green);
-    font-size: 35px;
+    font-size: 30px;
     line-height: 2;
     font-family: Montserrat-Bold;
     margin: auto 0;
@@ -323,7 +324,7 @@ nav ul{
     display: flex;
     justify-content: center;
     align-items: end;
-    width: 35%;
+    width: 30%;
 }
 
 .convenient-and-hassle-free-content-image img{
@@ -352,16 +353,17 @@ nav ul{
 
 .advance-watering-system-title{
     margin: 0;
-    font-size: 40px;
+    font-size: 35px;
     font-family: Prosto-One;
     width: 95%;
 }
 
 .advance-watering-system-text{
     margin: 0;
-    font-size: 35px;
+    font-size: 30px;
     font-family: Montserrat-Bold;
-    width: 90%
+    width: 90%;
+    line-height: 2;
 }
 
 
@@ -447,10 +449,11 @@ nav ul{
 
 #beneficiaries-text{
     color: var(--font-color-white);
-    padding: 0 10%;
     text-align: center;
-    font-size: 200%;
+    font-size: 30px;
     font-family: Montserrat-Bold;
+    width: 100%;
+    line-height: 2;
 }
 
 .our-purpose{
@@ -467,9 +470,10 @@ nav ul{
 .our-purpose-text{
     color: var(--font-color-white);
     height: 60%;
-    font-size: 200%;
+    font-size: 30px;
     text-align: center;
     font-family: Montserrat-Bold;
+    line-height: 2;
 }
 
 .project-plan{
@@ -616,6 +620,17 @@ footer .contact-info .contact-info-content{
     font-family: Montserrat-Bold;
 }
 
+@media screen and (max-width: 79px) {
+    nav .title-and-logo #navbar-title{
+        font-size: 7px!important;
+    }
+
+
+    .project-plan .project-plan-list .container{
+        font-size: 5px;
+    }
+}
+
 
 @media (max-width: 119px){
     #body{
@@ -627,19 +642,32 @@ footer .contact-info .contact-info-content{
     }
 
     #body h5{
-        font-size: 10px!important;
+        font-size: 4px!important;
     }
 
     #body h4{
-        font-size: 13px!important;
+        font-size: 6px!important;
+    }
+
+    #body p{
+        font-size: 3px!important;
+    }
+
+    .links ul li{
+        font-size: 4px!important;
+    }
+
+    .main-title .title h1{
+        font-size: 9px!important;
     }
 
     .title{
-        margin-bottom: 1px!important;
+        margin-bottom: 0;
     }
 
+
     .main-title .title h6{
-        font-size: 7px!important;
+        font-size: 4px!important;
     }
 
     .title-and-logo #navbar-logo{
@@ -647,7 +675,7 @@ footer .contact-info .contact-info-content{
     }
 
     .title-and-logo #navbar-title{
-        font-size: clamp(10px, 11px, 11px)!important;
+        font-size: 10px!important;
     }
 
     .title-and-logo .smaller{
@@ -679,10 +707,6 @@ footer .contact-info .contact-info-content{
         margin: 0 4px 0 0;
     }
 
-    .title{
-        margin-bottom: 30px;
-    }
-
     .title h1{
         font-size: 15px!important;
     }
@@ -707,7 +731,7 @@ footer .contact-info .contact-info-content{
     .title-link, 
     .beneficiaries h2 span
     {
-        font-size: 13px!important;
+        font-size: 6px!important;
     }
 
     .assistance-log-system{
@@ -721,8 +745,20 @@ footer .contact-info .contact-info-content{
         margin: 20px 0!important; 
     }
 
-    footer{
-        margin-top: 30px;
+    .contact-info .contact-info-title h3{
+        font-size: 10px!important;
+    }
+
+    .contact-info .contact-info-content .email p:first-child, .contact-info .contact-info-content .address p:first-child{
+        font-size: 6px!important;
+    }
+
+    .contact-info .contact-info-content .email p:nth-child(2){
+        font-size: 3px;
+    }
+
+    .contact-info .contact-info-content .address p:nth-child(2){
+        font-size: 4px;
     }
 }
 
@@ -806,10 +842,13 @@ footer .contact-info .contact-info-content{
     .assistance-log-system-title h2, 
     .assistance-log-system-title span,
     .about-title,
-    .title-link, 
-    .beneficiaries h2 span
+    .title-link
     {
         font-size: 18px!important;
+    }
+
+    .beneficiaries h2{
+        font-size: 15px!important;
     }
 
     .assistance-log-system{
@@ -822,8 +861,12 @@ footer .contact-info .contact-info-content{
         max-width: 250px;   
     }
 
-    footer{
-        margin-top: 30px;
+    .contact-info .contact-info-content .email p:nth-child(2){
+        font-size: 8px;
+    }
+
+    .contact-info .contact-info-content .address p:nth-child(2){
+        font-size: 8px;
     }
 }
 
@@ -851,6 +894,10 @@ footer .contact-info .contact-info-content{
     }
 
     .smaller2{
+        font-size: 31px;
+    }
+
+    .beneficiaries h2{
         font-size: 25px;
     }
 
@@ -867,7 +914,7 @@ footer .contact-info .contact-info-content{
     }
 
     .title{
-        margin-bottom: 50px;
+        margin-bottom: 80px;
     }
 
     .title h1{
@@ -882,16 +929,20 @@ footer .contact-info .contact-info-content{
         padding: 0;
     }
 
-    footer{
-        margin-top: 30%;
-    }
-
     .anchor-container{
         width: 100%;
     }
 
     .project-plan-list{
         font-size: 13px;
+    }
+
+    .contact-info .contact-info-content .email p:nth-child(2){
+        font-size: 12px;
+    }
+
+    .contact-info .contact-info-content .address p:nth-child(2){
+        font-size: 12px;
     }
 }
 
@@ -949,7 +1000,7 @@ footer .contact-info .contact-info-content{
     }
 
     .title{
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
 
     .anchor-container{
@@ -997,7 +1048,7 @@ footer .contact-info .contact-info-content{
         height: auto;
         background-color: var(--font-color-white);
         position: fixed;
-        padding: 10px 0;
+        padding: 0;
         max-width: 100%;
         position: fixed;
         z-index: 1000;
@@ -1075,7 +1126,7 @@ footer .contact-info .contact-info-content{
     
     .title {
         width: 80%; 
-        height: 60px;
+        height: 40px;
     }
     
     .title h1 {
@@ -1139,7 +1190,10 @@ footer .contact-info .contact-info-content{
     .convenient-and-hassle-free-content{
         display: flex;
         flex-direction: column; 
-        
+    }
+
+    .convenient-and-hassle-free-content-image, .advance-watering-system-image, .assistance-log-system-image{
+        margin: 0 auto;
     }
 
     .advance-watering-system{
@@ -1147,7 +1201,7 @@ footer .contact-info .contact-info-content{
         border-radius: 0;
     }
 
-    #text1, #text2, .convenient-and-hassle-free-content-image{
+    #text1, #text2{
         width: 90%;
         margin: 0 auto;
         font-size: 1rem;
@@ -1235,6 +1289,10 @@ footer .contact-info .contact-info-content{
         padding: 0;
     }
 
+    .meet-the-team .circle-container .last-three-circles #circle5{
+        margin-bottom: 50%!important;
+    }
+
     .container{
         margin-right: 0;
     }
@@ -1293,6 +1351,12 @@ footer .contact-info .contact-info-content{
 
     .title-link{
         font-size: 72px;
+    }
+}
+
+@media (min-width: 790px) and (max-width: 910px){
+    .context-title{
+        padding: 0 0 0 15%;
     }
 }
 
@@ -1362,79 +1426,10 @@ footer .contact-info .contact-info-content{
 }
 
 
-@media only screen and (min-width: 1143px) and (max-width: 1440px){
+@media only screen and (min-width: 1143px){
     #navbar-title{
         font-size: 43px;
     }
-}
-
-
-@media only screen and (min-width: 1441px) and (max-width: 1740px){
-
-    #navbar-title{
-        font-size: 60px;
-    }
-
-    .links a, #mock-up-button{
-        font-size: 40px;
-    }
-
-    .context{
-        width: 1740px;
-        max-width: 100%; 
-    }
-
-    .context-title{
-        width: 1740px;
-        max-width: 100%;
-    }
-
-    .convenient-and-hassle-free{
-        width: 1740px;
-        max-width: 100%;
-    }
-
-    .convenient-and-hassle-free-content{
-        width: 1740px;
-        max-width: 100%;
-    }
-
-    .advance-watering-system{
-        width: 1740px;
-        max-width: 100%;
-    }
-
-    .assistance-log-system{
-        width: 1740px;
-        max-width: 100%;
-        margin-top: 200px;
-    }
-
-    .about-the-project{
-        width: 1740px;
-        max-width: 100%;
-    }
-
-    .our-purpose{
-        width: 1740px;
-        max-width: 100%;
-    }
-}
-
-  
-@media only screen and (min-width: 1741px) {
-
-    #navbar-title{
-        font-size: 70px;
-    }
-
-    .links a, #mock-up-button{
-        font-size: 50px;
-    }
-
-    .main-title{
-        margin-top: 8%;
-    }
 
     .context{
         width: 1920px;
@@ -1477,3 +1472,4 @@ footer .contact-info .contact-info-content{
         max-width: 100%;
     }
 }
+
