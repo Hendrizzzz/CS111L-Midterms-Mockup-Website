@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function hideNavbarLinks() {
-    const navBarLinks = ['aboutNav', 'teamNav', 'contactNav', 'body'];
+    const navBarLinks = ['aboutNav', 'teamNav', 'contactNav', 'mainContent'];
     navBarLinks.forEach(linkId => {
       document.getElementById(linkId).style.display = 'none';
     });
@@ -75,7 +75,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Reveal the main title after a delay
     ScrollReveal().reveal('.main-title', {
-        delay: 10
+        delay: 10,
+        origin: 'top'
     });
     ScrollReveal().reveal('.context', {
         delay: 10,
@@ -200,6 +201,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// For button arrow up
 document.addEventListener('DOMContentLoaded', function () {
   var backToTopButton = document.getElementById('backToTopBtn');
 
@@ -217,4 +219,32 @@ document.addEventListener('DOMContentLoaded', function () {
       document.body.scrollIntoView({ behavior: 'smooth' });
   };
 });
+
+
+
+const nav = document.querySelector("nav");
+let lastScrollY = window.scrollY;
+let ticking = false;
+
+function handleScroll() {
+  if (lastScrollY < window.scrollY) {
+    nav.classList.add("nav--hidden");
+  } else {
+    nav.classList.remove("nav--hidden");
+  }
+
+  lastScrollY = window.scrollY;
+  ticking = false;
+}
+
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    window.requestAnimationFrame(handleScroll);
+    ticking = true;
+  }
+});
+
+
+
+
 

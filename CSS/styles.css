@@ -22,6 +22,11 @@
 
 * {
     box-sizing: border-box;
+    
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -33,24 +38,32 @@ body{
     margin: 0;
 }
 
-.body{
+.main{
     overflow: hidden;
 }
 
-nav{
+nav {
     position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
-    background-color: var(--font-color-white);
+    background-color: rgba(85, 70, 70, 0.99);
+    color: white;
     height: auto;
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
     padding: 2% 0;
     z-index: 999;
+    transition: transform 0.5s;
+    transform: translateY(0); /* Initial position */
 }
+
+.nav--hidden {
+    transform: translateY(-100%); /* Move up to hide */
+}
+
+
 
 .title-and-logo{
     display: flex;
@@ -68,7 +81,6 @@ nav{
 }
 
 #navbar-title{
-    color: var(--font-color-green);
     font-family: Prosto-One;
     font-size: 50px; 
     font-weight: 400; 
@@ -86,7 +98,7 @@ nav .links{
     right: 0;
     margin: 0;
     font-family: Lalezar;
-    font-size: 20px;
+    font-size: 18px;
     width: 50%;
     display: flex;
     justify-content: end;
@@ -116,11 +128,11 @@ nav ul{
     text-decoration: none;
     list-style: none;
     margin: 0 4%;
+    color: white;
 }
 
 .links li{
     text-decoration-line: none;
-    color: var(--font-color-green);
     opacity: 90%;
     font-weight: bolder;
     font-size: 120%;
@@ -131,9 +143,9 @@ nav ul{
 
 .links ul li a {
     position: relative;
-    color: var(--font-color-green); 
     text-decoration: none; 
     margin: 0;
+    color: white;
 }
 
 .links ul li a::after {
@@ -141,7 +153,7 @@ nav ul{
     position: absolute;
     width: 0;
     height: 3px;
-    background-color: var(--font-color-green);
+    background-color: var(--font-color-white);
     bottom: 0;
     left: 0;
     transition: width 0.3s ease; /* Add transition effect */
@@ -156,8 +168,8 @@ nav ul{
 }
 
 #mock-up-button:hover {
-    background-color: var(--font-color-green);
-    color: var(--font-color-white);
+    background-color: var(--font-color-white);
+    color: rgba(79, 64, 64, 1);
     border-radius: 20%!important;
     border: 0 solid var(--font-color-white);
     opacity: 100%;
@@ -173,31 +185,34 @@ nav ul{
     display: flex;
     align-items: center; 
     justify-content: space-between; 
-    max-width: 1440px;
+    max-width: 1920px;
     margin: auto;
     overflow: hidden;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-top: 8%;
+    margin-bottom: 8%;
 }
 
 .title {
     margin-top: 0;
-    width: 39%; 
+    width: 55%; 
 }
 
 .title h1 {
     width: auto;
     color: var(--font-color-green);
     font-weight: 400;
-    font-size: clamp(3.125rem, -0.1995rem + 10.6383vw, 9.375rem);    
+    font-size: clamp(5rem, 0.4067rem + 9.5569vw, 11.875rem);    
     line-height: 0.8; 
     margin: 0;
     font-family: Prosto-One;
 }
 
-
 .title h6 {
     color: black;
     font-family: Prosto-One;
-    font-size: 24px; 
+    font-size: clamp(0.875rem, 0.2904rem + 1.2163vw, 1.75rem); 
     margin-top: 0;
     height: 70px;
 }
@@ -206,7 +221,7 @@ nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 0 0 10%;
+    width: 40%;
 }
 
 .title-logo img {
@@ -389,21 +404,20 @@ nav ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
 }
 
 .assistance-log-system-image{
-    width: 20%;
-    max-height: 100%;
+    width: 35%;
 }
 
 .assistance-log-system-content img{
-    height: 4%;
     width: 100%;
 }
 
 .assistance-log-system-content h5{
-    width: 70%;
+    width: 50%;
+    padding-right: 10%;
+    margin: 0 auto;
 }
 
 .about-the-project{
@@ -486,9 +500,14 @@ nav ul{
     height: auto;
 }
 
+.project-plan-title h2{
+    color: var(--font-color-green);
+}
+
 .project-plan img{
-    width: 80%;
+    width: 60%;
     height: auto;
+    border-radius: 20px;
 }
 
 .project-plan-list {
@@ -599,26 +618,100 @@ nav ul{
     text-align: center; 
 }
 
-footer .contact-info{
+footer{
     background-color: rgba(79, 64, 64, 1);
-    color: var(--font-color-white);
+    padding: 5% 3% ;
+    color: var(--font-color-white)
 }
 
-footer .contact-info .contact-info-content{
+.footer{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.contact-info-title{
-    font-family: Lalezar;
-    text-align: center;
-    margin-top: 3%;
+.row1, .quick-links, .contact-info{
+    width: 30%;
 }
 
-.contact-info-content .address, .contact-info-content .email{
-    margin: 2% 5% 7% 5%;
-    text-align: center;
+.icon{
+    width: 15px;
+}
+
+.footer .boyband h1 {
+    font-family: Prosto-One;
+    margin-bottom: 0;
+}
+
+.social-logo{
+    margin-top: 0;
+}
+
+.social-logo img{
+    width: 30px;
+    margin-right: 6%;
+}
+
+.mission{
+    margin-top: 30%;
+
+}
+
+.footer-title-with-icon h5{
+    font-size: 19px;
     font-family: Montserrat-Bold;
+}
+
+.footer-title-with-icon p{
+    font-size: 14px;
+    font-family: Montserrat-Bold;
+}
+
+.footer-title h3{
+    font-family: Montserrat-Bold;
+}
+
+.three-links p a{
+    text-decoration: none;
+    list-style: none;
+    color: inherit!important;
+    font-family: Montserrat-Bold;
+    font-size: 13px;
+}
+
+.three-links p a:hover{
+    text-decoration: underline;
+}
+
+.email p, .address p{
+    line-height: 1;
+}
+
+.email{
+    margin-bottom: 10%;
+}
+
+.email p{
+    font-size: 13px;
+    font-family: Montserrat-Bold;
+}
+
+.footer-title-with-icon{
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+}
+
+.adress p{
+    font-size: 13px;
+    font-family: Montserrat-Bold;
+}
+
+.smaller3{
+    font-size: 11px;
+}
+
+.copyright{
+    text-align: center;
+    margin-top: 5%;
 }
 
 #backToTopBtn {
@@ -626,7 +719,7 @@ footer .contact-info .contact-info-content{
     bottom: 20px;
     right: 20px;
     display: none;
-    background-color: rgb(0, 153, 85);
+    background-color: rgba(79, 64, 64, 1);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -638,6 +731,10 @@ footer .contact-info .contact-info-content{
 
 #backToTopBtn:hover {
     background-color: rgb(0, 153, 85); /* Optional: Change background color on hover */
+}
+
+.main{
+    margin-bottom: 20%;
 }
 
 
@@ -655,23 +752,23 @@ footer .contact-info .contact-info-content{
 
 
 @media (max-width: 119px){
-    #body{
+    #mainContent{
         margin-top: 70px;
     }
 
-    #body p, .project-plan-list{
+    #mainContent p, .project-plan-list{
         font-size: 7px;
     }
 
-    #body h5{
+    #mainContent h5{
         font-size: 4px!important;
     }
 
-    #body h4{
+    #mainContent h4{
         font-size: 6px!important;
     }
 
-    #body p{
+    #mainContent p{
         font-size: 3px!important;
     }
 
@@ -706,10 +803,6 @@ footer .contact-info .contact-info-content{
 
     .smaller{
         display: none;
-    }
-
-    .smaller2{
-        font-size: 20px!important;
     }
 
     .links ul li a::after {
@@ -767,38 +860,23 @@ footer .contact-info .contact-info-content{
         margin: 20px 0!important; 
     }
 
-    .contact-info .contact-info-title h3{
-        font-size: 10px!important;
-    }
-
-    .contact-info .contact-info-content .email p:first-child, .contact-info .contact-info-content .address p:first-child{
-        font-size: 6px!important;
-    }
-
-    .contact-info .contact-info-content .email p:nth-child(2){
-        font-size: 3px;
-    }
-
-    .contact-info .contact-info-content .address p:nth-child(2){
-        font-size: 4px;
-    }
 }
 
 
 @media (min-width: 120px) and (max-width: 199px){
-    #body{
+    #mainContent{
         margin-top: 120px;
     }
 
-    #body p, .project-plan-list{
+    #mainContent p, .project-plan-list{
         font-size: 9px;
     }
 
-    #body h5{
+    #mainContent h5{
         font-size: 13px!important;
     }
 
-    #body h4{
+    #mainContent h4{
         font-size: 15px!important;
     }
 
@@ -883,18 +961,11 @@ footer .contact-info .contact-info-content{
         max-width: 250px;   
     }
 
-    .contact-info .contact-info-content .email p:nth-child(2){
-        font-size: 8px;
-    }
-
-    .contact-info .contact-info-content .address p:nth-child(2){
-        font-size: 8px;
-    }
 }
 
 
 @media (min-width: 200px) and (max-width: 271px) {
-    #body{
+    #mainContent{
         margin-top: 120px;
     }
 
@@ -915,8 +986,8 @@ footer .contact-info .contact-info-content{
         font-size: 7px!important;
     }
 
-    .smaller2{
-        font-size: 31px;
+    .assistance-log-system-title h2, .advance-watering-system-title h2, .convenient-and-hassle-free-title h2, .context .context-title h2{
+        font-size: 29px;
     }
 
     .beneficiaries h2{
@@ -959,13 +1030,6 @@ footer .contact-info .contact-info-content{
         font-size: 13px;
     }
 
-    .contact-info .contact-info-content .email p:nth-child(2){
-        font-size: 12px;
-    }
-
-    .contact-info .contact-info-content .address p:nth-child(2){
-        font-size: 12px;
-    }
 }
 
 
@@ -1057,24 +1121,15 @@ footer .contact-info .contact-info-content{
         line-height: 1.5;
     }
 
-    .body{
+    .main{
         margin-top: 120px;
     }
     
     nav {
-        display: flex;
-        flex-wrap: wrap;
+
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         height: auto;
-        background-color: var(--font-color-white);
-        position: fixed;
         padding: 0;
-        max-width: 100%;
-        position: fixed;
-        z-index: 1000;
-        width: 100%;
     }
 
     .title-and-logo{
@@ -1144,6 +1199,8 @@ footer .contact-info .contact-info-content{
         flex-direction: column; 
         align-items: center;
         text-align: center;
+        margin-top: 50%;
+        margin-bottom: 50%;
     }
     
     .title {
@@ -1152,12 +1209,12 @@ footer .contact-info .contact-info-content{
     }
     
     .title h1 {
-        font-size: 2.5rem; 
+        font-size: clamp(2.125rem, 0.2146rem + 7.3654vw, 3.75rem); 
         line-height: 1.2;
     }
 
     .title h6{
-        font-size: 1rem;
+        font-size: clamp(0.875rem, 0.4341rem + 1.6997vw, 1.25rem);
     }
     
     .context-title h2, .about-title {
@@ -1318,25 +1375,43 @@ footer .contact-info .contact-info-content{
     .container{
         margin-right: 0;
     }
-    
-    footer .contact-info {
-        padding: 20px 0; 
+
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10% 0;
     }
 
-    .contact-info-content p{
-        font-size: small;
-    }
-    
-    .contact-info-content .address, .contact-info-content .email {
-        margin: 10px 5%; 
+    .row1, .quick-links, .contact-info{
+        width: 80%;
         text-align: center;
+    }
+
+    .row1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mission{
+        margin-top: 10%;
+    }
+
+    .quick-links{
+        margin-top: 10%;
+    }
+
+    .contact-info{
+        margin-top: 10%;
     }
 }
 
 
 @media (min-width: 769px) and (max-width: 852px) { 
 
-    .body{
+    .main{
         margin-top: 50px;
     }
     
@@ -1417,16 +1492,12 @@ footer .contact-info .contact-info-content{
 
 @media (min-width: 973px) and (max-width: 1142px) { 
 
-    .body{
+    .main{
         margin-top: 50px;
     }
 
     .title-and-logo #navbar-title{
-        font-size: 40px;
-    }
-
-    .title-and-logo .smaller{
-        font-size: 13px;
+        font-size: 35px;
     }
 
     .title-link{
@@ -1434,14 +1505,19 @@ footer .contact-info .contact-info-content{
     }
 
     nav .links{
-        font-size: 22px;
+        font-size: 18px;
     }
 }
 
 
 @media only screen and (min-width: 1143px){
     #navbar-title{
-        font-size: 43px;
+        font-size: 35px;
+    }
+
+    .main-title{
+        width: 1920px;
+        max-width: 100%; 
     }
 
     .context{
