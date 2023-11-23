@@ -47,8 +47,8 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(85, 70, 70, 0.99);
-    color: white;
+    background-color: rgb(250, 250, 250);
+    color: var(--font-color-green);
     height: auto;
     width: 100%;
     max-width: 100%;
@@ -106,7 +106,11 @@ nav .links{
 
 #mock-up-button {
     margin-left: 5%; 
+    border-radius: 20%;
+    background-color: inherit;
+    color: var(--font-color-green)!important;
 }
+
 
 nav ul{
     right: 0;
@@ -128,7 +132,6 @@ nav ul{
     text-decoration: none;
     list-style: none;
     margin: 0 4%;
-    color: white;
 }
 
 .links li{
@@ -145,7 +148,7 @@ nav ul{
     position: relative;
     text-decoration: none; 
     margin: 0;
-    color: white;
+    color: var(--font-color-green);
 }
 
 .links ul li a::after {
@@ -153,7 +156,7 @@ nav ul{
     position: absolute;
     width: 0;
     height: 3px;
-    background-color: var(--font-color-white);
+    background-color: var(--font-color-green);
     bottom: 0;
     left: 0;
     transition: width 0.3s ease; /* Add transition effect */
@@ -168,9 +171,9 @@ nav ul{
 }
 
 #mock-up-button:hover {
-    background-color: var(--font-color-white);
-    color: rgba(79, 64, 64, 1);
-    border-radius: 20%!important;
+    background-color:rgb(0, 153, 85);
+    color: var(--font-color-white)!important;
+    border-radius: 10px!important;
     border: 0 solid var(--font-color-white);
     opacity: 100%;
     cursor: pointer;
@@ -501,7 +504,7 @@ nav ul{
 }
 
 .project-plan-title h2{
-    color: var(--font-color-green);
+    color: var(--font-color-white);
 }
 
 .project-plan img{
@@ -620,8 +623,8 @@ nav ul{
 
 footer{
     background-color: rgba(79, 64, 64, 1);
-    padding: 5% 3% ;
-    color: var(--font-color-white)
+    color: var(--font-color-white);
+    padding: 5%;
 }
 
 .footer{
@@ -676,6 +679,7 @@ footer{
     color: inherit!important;
     font-family: Montserrat-Bold;
     font-size: 13px;
+    margin: 0;
 }
 
 .three-links p a:hover{
@@ -700,7 +704,7 @@ footer{
     font-size: 15px;
 }
 
-.adress p{
+.address p{
     font-size: 13px;
     font-family: Montserrat-Bold;
 }
@@ -727,6 +731,8 @@ footer{
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s ease; /* Optional: Add a smooth transition for background color */
+    width: 3%;
+    height: 6%;
 }
 
 #backToTopBtn:hover {
@@ -772,8 +778,8 @@ footer{
         font-size: 3px!important;
     }
 
-    .links ul li{
-        font-size: 4px!important;
+    .links ul li, #mock-u-button{
+        font-size: 2.5px!important;
     }
 
     .main-title .title h1{
@@ -904,8 +910,8 @@ footer{
         padding: 0;
     }
 
-    .links ul li{
-        font-size: 7px;
+    .links ul li, #mock-u-button{
+        font-size: 3px!important;
         text-align: left;
     }
 
@@ -998,8 +1004,8 @@ footer{
         padding: 0;
     }
 
-    .links ul li{
-        font-size: 8px;
+    .links ul li, #mock-u-button  {
+        font-size: 6px!important;
     }
 
     .links ul li a::after {
@@ -1048,10 +1054,6 @@ footer{
         font-size: 7px;
     }
 
-    nav .links{
-        font-size: clamp(5px, 11px, 11px)!important;
-    }
-
     .title{
         margin-bottom: 70px;
     }
@@ -1062,6 +1064,10 @@ footer{
 
     .project-plan-list{
         font-size: 15px;
+    }
+
+    nav .links, #mock-up-button{
+        font-size: clamp(5px, 8px, 8px)!important;
     }
 }
 
@@ -1093,7 +1099,7 @@ footer{
         width: 100%;
     }
     
-    nav .links{
+    nav .links, #mock-up-button{
         font-size: clamp(5px, 10px, 10px)!important;
     }
 }
@@ -1140,6 +1146,10 @@ footer{
 
     #mock-up-button:hover{
         padding: 0;
+    }
+
+    #mock-up-button{
+        font-size: 13px;
     }
 
     nav .links{
@@ -1406,6 +1416,23 @@ footer{
     .contact-info{
         margin-top: 10%;
     }
+
+    .boyband h1{
+        font-size: clamp(0.25rem, 0.1368rem + 3.6212vw, 1.875rem);
+    }
+
+    .mission h5, .footer-title{
+        font-size: clamp(0.1875rem, 0.1135rem + 2.3677vw, 1.25rem);
+    }
+
+    .mission p, .three-links p a, .email p, .address p{
+        font-size: clamp(0.125rem, 0.0684rem + 1.8106vw, 0.9375rem);
+    }
+
+    .copyright{
+        font-size: clamp(0.125rem, 0.0771rem + 1.532vw, 0.8125rem);
+    }
+
 }
 
 
