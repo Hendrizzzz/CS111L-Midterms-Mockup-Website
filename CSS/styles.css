@@ -177,6 +177,7 @@ nav ul{
     border: 0 solid var(--font-color-white);
     opacity: 100%;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 #home{
