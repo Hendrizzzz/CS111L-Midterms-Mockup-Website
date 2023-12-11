@@ -56,11 +56,11 @@ nav {
     padding: 2% 0;
     z-index: 999;
     transition: transform 0.5s;
-    transform: translateY(0); /* Initial position */
+    transform: translateY(0); 
 }
 
 .nav--hidden {
-    transform: translateY(-100%); /* Move up to hide */
+    transform: translateY(-100%);
 }
 
 
@@ -159,7 +159,7 @@ nav ul{
     background-color: var(--font-color-green);
     bottom: 0;
     left: 0;
-    transition: width 0.3s ease; /* Add transition effect */
+    transition: width 0.3s ease; 
 }
 
 .links ul li:hover{
@@ -1589,4 +1589,3 @@ footer{
         max-width: 100%;
     }
 }
-
